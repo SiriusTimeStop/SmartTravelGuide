@@ -37,6 +37,9 @@
 		38C586222B61215B002755EB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586212B61215B002755EB /* FirebaseFirestoreSwift */; };
 		38C586382B61215C002755EB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586372B61215C002755EB /* FirebaseStorage */; };
 		38C5863C2B612202002755EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C5863B2B612202002755EB /* GoogleService-Info.plist */; };
+		38C586402B612A46002755EB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5863E2B612A46002755EB /* ProfileView.swift */; };
+		38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5863F2B612A46002755EB /* ReusableProfileContent.swift */; };
+		38C586442B612A89002755EB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586432B612A89002755EB /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,8 @@
 		38C585F92B612080002755EB /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		38C585FA2B612080002755EB /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		38C5863B2B612202002755EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38C5863E2B612A46002755EB /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		38C5863F2B612A46002755EB /* ReusableProfileContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableProfileContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C586442B612A89002755EB /* SDWebImageSwiftUI in Frameworks */,
 				38C5861E2B61215B002755EB /* FirebaseFirestore in Frameworks */,
 				38C586222B61215B002755EB /* FirebaseFirestoreSwift in Frameworks */,
 				38C586122B61215B002755EB /* FirebaseAuth in Frameworks */,
@@ -169,6 +175,7 @@
 		38C585F02B612080002755EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38C5863D2B612A46002755EB /* Profile */,
 				38C585F12B612080002755EB /* RideRequestView.swift */,
 				38C585F22B612080002755EB /* TravelGuide.swift */,
 				38C585F32B612080002755EB /* ShowPlanDetailView.swift */,
@@ -197,6 +204,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		38C5863D2B612A46002755EB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				38C5863E2B612A46002755EB /* ProfileView.swift */,
+				38C5863F2B612A46002755EB /* ReusableProfileContent.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +234,7 @@
 				38C5861D2B61215B002755EB /* FirebaseFirestore */,
 				38C586212B61215B002755EB /* FirebaseFirestoreSwift */,
 				38C586372B61215C002755EB /* FirebaseStorage */,
+				38C586432B612A89002755EB /* SDWebImageSwiftUI */,
 			);
 			productName = SmartTravel;
 			productReference = 38C585C12B612004002755EB /* SmartTravel.app */;
@@ -249,6 +266,7 @@
 			mainGroup = 38C585B82B612004002755EB;
 			packageReferences = (
 				38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				38C586422B612A89002755EB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 38C585C22B612004002755EB /* Products */;
 			projectDirPath = "";
@@ -284,6 +302,7 @@
 				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
 				38C585ED2B61206B002755EB /* RidesType.swift in Sources */,
 				38C585EC2B61206B002755EB /* restaurantType.swift in Sources */,
+				38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */,
 				38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */,
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,
@@ -293,6 +312,7 @@
 				38C585FC2B612080002755EB /* RideRequestView.swift in Sources */,
 				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
 				38C585E82B61206B002755EB /* Place.swift in Sources */,
+				38C586402B612A46002755EB /* ProfileView.swift in Sources */,
 				38C585FD2B612080002755EB /* TravelGuide.swift in Sources */,
 				38C585E22B61206B002755EB /* TimeFormatting.swift in Sources */,
 				38C585FB2B612080002755EB /* MapViewModel.swift in Sources */,
@@ -515,6 +535,14 @@
 				minimumVersion = 10.20.0;
 			};
 		};
+		38C586422B612A89002755EB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -537,6 +565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		38C586432B612A89002755EB /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C586422B612A89002755EB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
