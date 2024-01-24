@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22222" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Attraction" representedClassName="Attraction" syncable="YES" codeGenerationType="class">
+        <attribute name="attraction1" optional="YES" attributeType="String"/>
+        <attribute name="attraction2" optional="YES" attributeType="String"/>
+        <attribute name="attraction3" optional="YES" attributeType="String"/>
+        <attribute name="attraction4" optional="YES" attributeType="String"/>
+        <attribute name="cost" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+    </entity>
+</model>

@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C42B612004002755EB /* SmartTravelApp.swift */; };
+		38C585C72B612004002755EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C62B612004002755EB /* ContentView.swift */; };
+		38C585C92B612006002755EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C585C82B612006002755EB /* Assets.xcassets */; };
+		38C585CC2B612006002755EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C585CB2B612006002755EB /* Preview Assets.xcassets */; };
+		38C585E22B61206B002755EB /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585D32B61206B002755EB /* TimeFormatting.swift */; };
+		38C585E32B61206B002755EB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585D42B61206B002755EB /* View+Extensions.swift */; };
+		38C585E42B61206B002755EB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585D52B61206B002755EB /* LoadingView.swift */; };
+		38C585E52B61206B002755EB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585D72B61206B002755EB /* DataController.swift */; };
+		38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38C585D82B61206B002755EB /* attractionData.xcdatamodeld */; };
+		38C585E72B61206B002755EB /* locationShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585DB2B61206B002755EB /* locationShow.swift */; };
+		38C585E82B61206B002755EB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585DC2B61206B002755EB /* Place.swift */; };
+		38C585E92B61206B002755EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585DD2B61206B002755EB /* User.swift */; };
+		38C585EA2B61206B002755EB /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585DE2B61206B002755EB /* TripCard.swift */; };
+		38C585EB2B61206B002755EB /* destinationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585DF2B61206B002755EB /* destinationLocation.swift */; };
+		38C585EC2B61206B002755EB /* restaurantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585E02B61206B002755EB /* restaurantType.swift */; };
+		38C585ED2B61206B002755EB /* RidesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585E12B61206B002755EB /* RidesType.swift */; };
+		38C585FB2B612080002755EB /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585EF2B612080002755EB /* MapViewModel.swift */; };
+		38C585FC2B612080002755EB /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F12B612080002755EB /* RideRequestView.swift */; };
+		38C585FD2B612080002755EB /* TravelGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F22B612080002755EB /* TravelGuide.swift */; };
+		38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F32B612080002755EB /* ShowPlanDetailView.swift */; };
+		38C585FF2B612080002755EB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F42B612080002755EB /* MapView.swift */; };
+		38C586002B612080002755EB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F52B612080002755EB /* Home.swift */; };
+		38C586012B612080002755EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F72B612080002755EB /* MainView.swift */; };
+		38C586022B612080002755EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585F92B612080002755EB /* LoginView.swift */; };
+		38C586032B612080002755EB /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585FA2B612080002755EB /* RegisterView.swift */; };
+		38C586122B61215B002755EB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586112B61215B002755EB /* FirebaseAuth */; };
+		38C5861E2B61215B002755EB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 38C5861D2B61215B002755EB /* FirebaseFirestore */; };
+		38C586222B61215B002755EB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586212B61215B002755EB /* FirebaseFirestoreSwift */; };
+		38C586382B61215C002755EB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586372B61215C002755EB /* FirebaseStorage */; };
+		38C5863C2B612202002755EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38C5863B2B612202002755EB /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38C585C12B612004002755EB /* SmartTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C585C42B612004002755EB /* SmartTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTravelApp.swift; sourceTree = "<group>"; };
+		38C585C62B612004002755EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38C585C82B612006002755EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38C585CB2B612006002755EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38C585D32B61206B002755EB /* TimeFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		38C585D42B61206B002755EB /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		38C585D52B61206B002755EB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		38C585D72B61206B002755EB /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		38C585D92B61206B002755EB /* attractionData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = attractionData.xcdatamodel; sourceTree = "<group>"; };
+		38C585DB2B61206B002755EB /* locationShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = locationShow.swift; sourceTree = "<group>"; };
+		38C585DC2B61206B002755EB /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		38C585DD2B61206B002755EB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		38C585DE2B61206B002755EB /* TripCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
+		38C585DF2B61206B002755EB /* destinationLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = destinationLocation.swift; sourceTree = "<group>"; };
+		38C585E02B61206B002755EB /* restaurantType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restaurantType.swift; sourceTree = "<group>"; };
+		38C585E12B61206B002755EB /* RidesType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesType.swift; sourceTree = "<group>"; };
+		38C585EF2B612080002755EB /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		38C585F12B612080002755EB /* RideRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		38C585F22B612080002755EB /* TravelGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelGuide.swift; sourceTree = "<group>"; };
+		38C585F32B612080002755EB /* ShowPlanDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPlanDetailView.swift; sourceTree = "<group>"; };
+		38C585F42B612080002755EB /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		38C585F52B612080002755EB /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		38C585F72B612080002755EB /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		38C585F92B612080002755EB /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		38C585FA2B612080002755EB /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		38C5863B2B612202002755EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38C585BE2B612004002755EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C5861E2B61215B002755EB /* FirebaseFirestore in Frameworks */,
+				38C586222B61215B002755EB /* FirebaseFirestoreSwift in Frameworks */,
+				38C586122B61215B002755EB /* FirebaseAuth in Frameworks */,
+				38C586382B61215C002755EB /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38C585B82B612004002755EB = {
+			isa = PBXGroup;
+			children = (
+				38C585C32B612004002755EB /* SmartTravel */,
+				38C585C22B612004002755EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38C585C22B612004002755EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38C585C12B612004002755EB /* SmartTravel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38C585C32B612004002755EB /* SmartTravel */ = {
+			isa = PBXGroup;
+			children = (
+				38C585D62B61206B002755EB /* DataModel */,
+				38C585D22B61206B002755EB /* Helpers */,
+				38C585DA2B61206B002755EB /* Model */,
+				38C585C42B612004002755EB /* SmartTravelApp.swift */,
+				38C585C62B612004002755EB /* ContentView.swift */,
+				38C5863B2B612202002755EB /* GoogleService-Info.plist */,
+				38C585F02B612080002755EB /* View */,
+				38C585EE2B612080002755EB /* ViewModel */,
+				38C585C82B612006002755EB /* Assets.xcassets */,
+				38C585CA2B612006002755EB /* Preview Content */,
+			);
+			path = SmartTravel;
+			sourceTree = "<group>";
+		};
+		38C585CA2B612006002755EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				38C585CB2B612006002755EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38C585D22B61206B002755EB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38C585D32B61206B002755EB /* TimeFormatting.swift */,
+				38C585D42B61206B002755EB /* View+Extensions.swift */,
+				38C585D52B61206B002755EB /* LoadingView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		38C585D62B61206B002755EB /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				38C585D72B61206B002755EB /* DataController.swift */,
+				38C585D82B61206B002755EB /* attractionData.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		38C585DA2B61206B002755EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38C585DB2B61206B002755EB /* locationShow.swift */,
+				38C585DC2B61206B002755EB /* Place.swift */,
+				38C585DD2B61206B002755EB /* User.swift */,
+				38C585DE2B61206B002755EB /* TripCard.swift */,
+				38C585DF2B61206B002755EB /* destinationLocation.swift */,
+				38C585E02B61206B002755EB /* restaurantType.swift */,
+				38C585E12B61206B002755EB /* RidesType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38C585EE2B612080002755EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38C585EF2B612080002755EB /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38C585F02B612080002755EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38C585F12B612080002755EB /* RideRequestView.swift */,
+				38C585F22B612080002755EB /* TravelGuide.swift */,
+				38C585F32B612080002755EB /* ShowPlanDetailView.swift */,
+				38C585F42B612080002755EB /* MapView.swift */,
+				38C585F52B612080002755EB /* Home.swift */,
+				38C585F62B612080002755EB /* MainView */,
+				38C585F82B612080002755EB /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38C585F62B612080002755EB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				38C585F72B612080002755EB /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		38C585F82B612080002755EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				38C585F92B612080002755EB /* LoginView.swift */,
+				38C585FA2B612080002755EB /* RegisterView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38C585C02B612004002755EB /* SmartTravel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38C585CF2B612006002755EB /* Build configuration list for PBXNativeTarget "SmartTravel" */;
+			buildPhases = (
+				38C585BD2B612004002755EB /* Sources */,
+				38C585BE2B612004002755EB /* Frameworks */,
+				38C585BF2B612004002755EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartTravel;
+			packageProductDependencies = (
+				38C586112B61215B002755EB /* FirebaseAuth */,
+				38C5861D2B61215B002755EB /* FirebaseFirestore */,
+				38C586212B61215B002755EB /* FirebaseFirestoreSwift */,
+				38C586372B61215C002755EB /* FirebaseStorage */,
+			);
+			productName = SmartTravel;
+			productReference = 38C585C12B612004002755EB /* SmartTravel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38C585B92B612004002755EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					38C585C02B612004002755EB = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 38C585BC2B612004002755EB /* Build configuration list for PBXProject "SmartTravel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38C585B82B612004002755EB;
+			packageReferences = (
+				38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 38C585C22B612004002755EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38C585C02B612004002755EB /* SmartTravel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38C585BF2B612004002755EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C585CC2B612006002755EB /* Preview Assets.xcassets in Resources */,
+				38C5863C2B612202002755EB /* GoogleService-Info.plist in Resources */,
+				38C585C92B612006002755EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38C585BD2B612004002755EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C585C72B612004002755EB /* ContentView.swift in Sources */,
+				38C586012B612080002755EB /* MainView.swift in Sources */,
+				38C585EA2B61206B002755EB /* TripCard.swift in Sources */,
+				38C586002B612080002755EB /* Home.swift in Sources */,
+				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
+				38C585ED2B61206B002755EB /* RidesType.swift in Sources */,
+				38C585EC2B61206B002755EB /* restaurantType.swift in Sources */,
+				38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */,
+				38C586022B612080002755EB /* LoginView.swift in Sources */,
+				38C586032B612080002755EB /* RegisterView.swift in Sources */,
+				38C585E52B61206B002755EB /* DataController.swift in Sources */,
+				38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */,
+				38C585E32B61206B002755EB /* View+Extensions.swift in Sources */,
+				38C585FC2B612080002755EB /* RideRequestView.swift in Sources */,
+				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
+				38C585E82B61206B002755EB /* Place.swift in Sources */,
+				38C585FD2B612080002755EB /* TravelGuide.swift in Sources */,
+				38C585E22B61206B002755EB /* TimeFormatting.swift in Sources */,
+				38C585FB2B612080002755EB /* MapViewModel.swift in Sources */,
+				38C585FF2B612080002755EB /* MapView.swift in Sources */,
+				38C585E92B61206B002755EB /* User.swift in Sources */,
+				38C585E72B61206B002755EB /* locationShow.swift in Sources */,
+				38C585EB2B61206B002755EB /* destinationLocation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		38C585CD2B612006002755EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38C585CE2B612006002755EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38C585D02B612006002755EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartTravel/Preview Content\"";
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38C585D12B612006002755EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartTravel/Preview Content\"";
+				DEVELOPMENT_TEAM = 3R3569WX7S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jacky.SmartTravel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38C585BC2B612004002755EB /* Build configuration list for PBXProject "SmartTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C585CD2B612006002755EB /* Debug */,
+				38C585CE2B612006002755EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38C585CF2B612006002755EB /* Build configuration list for PBXNativeTarget "SmartTravel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C585D02B612006002755EB /* Debug */,
+				38C585D12B612006002755EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38C586112B61215B002755EB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		38C5861D2B61215B002755EB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		38C586212B61215B002755EB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		38C586372B61215C002755EB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		38C585D82B61206B002755EB /* attractionData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38C585D92B61206B002755EB /* attractionData.xcdatamodel */,
+			);
+			currentVersion = 38C585D92B61206B002755EB /* attractionData.xcdatamodel */;
+			path = attractionData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38C585B92B612004002755EB /* Project object */;
+}
