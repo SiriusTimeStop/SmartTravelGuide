@@ -27,6 +27,11 @@ struct MainView: View {
                     Image(systemName: "gear")
                     Text("Profile")
                 }
+            PostTravelPlanView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Profile")
+                }
         }
         .onAppear(){
             UITabBar.appearance().backgroundColor = .white

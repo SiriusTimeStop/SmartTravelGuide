@@ -42,10 +42,10 @@ struct LoginView: View {
     private var horizontalLayout: some View {
         HStack(spacing: 20) {
             VStack(alignment: .leading, spacing: 10) {
-                Text("SmartPaint")
+                Text("SmartTravel")
                     .font(.largeTitle.bold())
                 
-                Text("Sign In SmartPaint Account")
+                Text("Sign In SmartTravel Account")
                     .font(.title3)
                 
                 Image("AppLogo")
@@ -112,11 +112,11 @@ struct LoginView: View {
     @ViewBuilder
     private var verticalLayout: some View {
         VStack(spacing: 10){
-            Text("SmartPaint")
+            Text("SmartTravel")
                 .font(.largeTitle.bold())
                 .hAlign(.leading)
             
-            Text("Sign In SmartPaint Account")
+            Text("Sign In SmartTravel Account")
                 .font(.title3)
                 .hAlign(.leading)
             

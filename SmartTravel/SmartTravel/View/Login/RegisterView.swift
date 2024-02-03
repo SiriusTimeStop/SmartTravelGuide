@@ -52,7 +52,7 @@ struct RegisterView: View{
                 .font(.largeTitle.bold())
                 .hAlign(.leading)
             
-            Text("Register SmartPaint Account")
+            Text("Register SmartTravel Account")
                 .font(.title3)
                 .hAlign(.leading)
             
@@ -112,7 +112,7 @@ struct RegisterView: View{
                     .font(.largeTitle.bold())
                     .hAlign(.leading)
                 
-                Text("Register SmartPaint Account")
+                Text("Register SmartTravel Account")
                     .font(.title3)
                     .hAlign(.leading)
                 
@@ -267,7 +267,7 @@ struct RegisterView: View{
     
     func BioRule(userBio: String) -> String{
         if userBio.count <= 0{
-            return "Welcome to SmartPaint"
+            return "Welcome to SmartTravel"
         }else if userBio.count > 20{
             return "Over maximum limit"
         }
