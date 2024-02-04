@@ -15,6 +15,7 @@
 		387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */; };
 		387055B42B6E15B6003EDD09 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B32B6E15B6003EDD09 /* PostCardView.swift */; };
 		387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B52B6E77A4003EDD09 /* TravelDetailView.swift */; };
+		387055B82B6FD0AD003EDD09 /* ReusablePostSightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */; };
 		38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C42B612004002755EB /* SmartTravelApp.swift */; };
 		38C585C72B612004002755EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C62B612004002755EB /* ContentView.swift */; };
 		38C585C92B612006002755EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C585C82B612006002755EB /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostView.swift; sourceTree = "<group>"; };
 		387055B32B6E15B6003EDD09 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		387055B52B6E77A4003EDD09 /* TravelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailView.swift; sourceTree = "<group>"; };
+		387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostSightView.swift; sourceTree = "<group>"; };
 		38C585C12B612004002755EB /* SmartTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C585C42B612004002755EB /* SmartTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTravelApp.swift; sourceTree = "<group>"; };
 		38C585C62B612004002755EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */,
 				387055B32B6E15B6003EDD09 /* PostCardView.swift */,
 				387055B52B6E77A4003EDD09 /* TravelDetailView.swift */,
+				387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */,
 			);
 			path = TravelPlan;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */,
 				387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */,
 				38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */,
+				387055B82B6FD0AD003EDD09 /* ReusablePostSightView.swift in Sources */,
 				38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */,
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,

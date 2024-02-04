@@ -1,22 +1,21 @@
 //
-//  ReusablePostView.swift
+//  ReusablePostSightView.swift
 //  SmartTravel
 //
-//  Created by jackychoi on 3/2/2024.
+//  Created by jackychoi on 4/2/2024.
 //
 
 import SwiftUI
 import Firebase
 
-struct ReusablePostView: View {
+struct ReusablePostSightView: View {
     @Binding var posts: [Post]
     
     /// - View properties
     @State var isFetching: Bool = true
     
     var body: some View {
-        /// - 1. horizontal
-        ScrollView(.vertical,showsIndicators: false){
+        ScrollView(.horizontal,showsIndicators: false){
             LazyVStack{
                 if isFetching{
                     ProgressView()
@@ -29,9 +28,11 @@ struct ReusablePostView: View {
                             .foregroundColor(.gray)
                             .padding(.top,30)
                     }else{
-                        /// 2. Displaying post HStack
-                        Posts()
-                            .padding()
+                        /// Displaying post
+                        HStack{
+                            Posts()
+                                .padding()
+                        }
                     }
                 }
             }
@@ -67,8 +68,7 @@ struct ReusablePostView: View {
     func fetchPosts() async{
         do{
             var query: Query!
-            /// 3. firebase collection
-            query = Firestore.firestore().collection("Routes")
+            query = Firestore.firestore().collection("Sightseeing Routes")
                 .order(by: "publishedDate",descending: true)
                 .limit(to: 100)
             let docs = try await query.getDocuments()

@@ -69,7 +69,7 @@ struct TravelPlanView: View {
                 .padding()
             Picker("Sample",selection: $requireType){
                 Text("Cultural Tourism").tag("Cultural Tourism")
-                Text("Ecotourism‎").tag("Ecotourism‎")
+                Text("Ecotourism").tag("Ecotourism")
                 Text("Sightseeing Tourism").tag("Sightseeing Tourism")
                 Text("Extreme Travel").tag("Extreme Travel")
             }
