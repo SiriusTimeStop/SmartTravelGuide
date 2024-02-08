@@ -57,9 +57,14 @@ struct ReusablePostView: View {
                 PostCardView(post: post) { updatedPost in
                     
                 } onDelete: {
-                    
+                    withAnimation(.easeInOut(duration: 0.25)){
+                        posts.removeAll{post.id == $0.id}
+                    }
                 }
+
             }
+            Divider()
+                .padding(.horizontal,-15)
         }
     }
     

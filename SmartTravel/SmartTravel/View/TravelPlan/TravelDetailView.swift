@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreLocation
+import MapKit
 
 struct TravelDetailView: View {
     let post: Post
@@ -13,6 +15,14 @@ struct TravelDetailView: View {
     var body: some View {
         ScrollView{
             Group{
+                
+                Map(initialPosition: .region(region)){
+                    Marker(post.location1, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0))
+                }
+                .frame(height: 300)
+                .padding(.bottom,10)
+
+                
                 Image(post.location1)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -56,6 +66,12 @@ struct TravelDetailView: View {
                         .frame(width: 18,height: 18)
                 }
                 .padding(.bottom)
+                
+                Map(initialPosition: .region(region2)){
+                    Marker(post.location2, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot2) ?? 0, longitude: Double(post.locationLon2) ?? 0))
+                }
+                .frame(height: 300)
+                .padding(.bottom,10)
                 
                 Image(post.location2)
                     .resizable()
@@ -101,6 +117,12 @@ struct TravelDetailView: View {
                 }
                 .padding(.bottom)
                 
+                Map(initialPosition: .region(region3)){
+                    Marker(post.location3, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0))
+                }
+                .frame(height: 300)
+                .padding(.bottom,10)
+                
                 Image(post.location3)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -131,6 +153,17 @@ struct TravelDetailView: View {
                 .padding(.bottom)
             }
         }
+    }
+    private var region: MKCoordinateRegion{
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+    }
+    
+    private var region2: MKCoordinateRegion{
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: Double(post.locationLot2) ?? 0, longitude: Double(post.locationLon2) ?? 0), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+    }
+    
+    private var region3: MKCoordinateRegion{
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     }
 }
 

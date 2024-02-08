@@ -114,43 +114,66 @@ struct TravelPlanView: View {
             var travelPlanLocationDistrict = []
             var travelPlanLocationMoney = []
             var travelPlanLocationType = []
-            for c in 0...2{
-                for x in 0...TravelLocation().location.count-1{
-                    
-                    ///Array condition 3x
-                    if requireType == TravelLocation().locationType[x] && requireDistrict == TravelLocation().locationDistrict[x]{
-                        for a in 1...4{
+            var travelPlanLocationLot = []
+            var travelPlanlocationLon = []
+            repeat{
+                uploadResultLocation = []
+                travelPlanLocationArray = []
+                travelPlanLocationDistrict = []
+                travelPlanLocationMoney = []
+                travelPlanLocationType = []
+                travelPlanLocationLot = []
+                travelPlanlocationLon = []
+                totalMoney = 0
+                for c in 0...2{
+                    for x in 0...TravelLocation().location.count-1{
+                        
+                        ///Array condition 3x
+                        if requireType == TravelLocation().locationType[x] && requireDistrict == TravelLocation().locationDistrict[x]{
+                            for a in 1...4{
+                                travelPlanLocationArray.append(TravelLocation().location[x])
+                                travelPlanLocationDistrict.append(TravelLocation().locationDistrict[x])
+                                travelPlanLocationType.append(TravelLocation().locationType[x])
+                                travelPlanLocationMoney.append(TravelLocation().locationMoney[x])
+                                travelPlanLocationLot.append(TravelLocation().locationLatitude[x])
+                                travelPlanlocationLon.append(TravelLocation().locationLongitude[x])
+                                
+                            }
+                        }else if requireType == TravelLocation().locationType[x] && requireDistrict != TravelLocation().locationDistrict[x]{
+                            for b in 1...2{
+                                travelPlanLocationArray.append(TravelLocation().location[x])
+                                travelPlanLocationDistrict.append(TravelLocation().locationDistrict[x])
+                                travelPlanLocationType.append(TravelLocation().locationType[x])
+                                travelPlanLocationMoney.append(TravelLocation().locationMoney[x])
+                                travelPlanLocationLot.append(TravelLocation().locationLatitude[x])
+                                travelPlanlocationLon.append(TravelLocation().locationLongitude[x])
+                            }
+                        }else{
                             travelPlanLocationArray.append(TravelLocation().location[x])
                             travelPlanLocationDistrict.append(TravelLocation().locationDistrict[x])
                             travelPlanLocationType.append(TravelLocation().locationType[x])
                             travelPlanLocationMoney.append(TravelLocation().locationMoney[x])
+                            travelPlanLocationLot.append(TravelLocation().locationLatitude[x])
+                            travelPlanlocationLon.append(TravelLocation().locationLongitude[x])
                         }
-                    }else if requireType == TravelLocation().locationType[x] && requireDistrict != TravelLocation().locationDistrict[x]{
-                        for b in 1...2{
-                            travelPlanLocationArray.append(TravelLocation().location[x])
-                            travelPlanLocationDistrict.append(TravelLocation().locationDistrict[x])
-                            travelPlanLocationType.append(TravelLocation().locationType[x])
-                            travelPlanLocationMoney.append(TravelLocation().locationMoney[x])
-                        }
-                    }else{
-                        travelPlanLocationArray.append(TravelLocation().location[x])
-                        travelPlanLocationDistrict.append(TravelLocation().locationDistrict[x])
-                        travelPlanLocationType.append(TravelLocation().locationType[x])
-                        travelPlanLocationMoney.append(TravelLocation().locationMoney[x])
                     }
+                    ///Random choose
+                    var number = Int.random(in: 0...travelPlanLocationArray.count-1)
+                    let randomLocation = travelPlanLocationArray[number]
+                    let randomDistrict = travelPlanLocationDistrict[number]
+                    let randomType = travelPlanLocationType[number]
+                    let randomMoney = travelPlanLocationMoney[number]
+                    let randomLot = travelPlanLocationLot[number]
+                    let randomLon = travelPlanlocationLon[number]
+                    uploadResultLocation.append(randomLocation as! String)
+                    uploadResultLocation.append(randomDistrict as! String)
+                    uploadResultLocation.append(randomType as! String)
+                    uploadResultLocation.append(randomMoney as! String)
+                    uploadResultLocation.append(randomLot as! String)
+                    uploadResultLocation.append(randomLon as! String)
                 }
-                ///Random choose
-                var number = Int.random(in: 0...travelPlanLocationArray.count-1)
-                let randomLocation = travelPlanLocationArray[number]
-                let randomDistrict = travelPlanLocationDistrict[number]
-                let randomType = travelPlanLocationType[number]
-                let randomMoney = travelPlanLocationMoney[number]
-                uploadResultLocation.append(randomLocation as! String)
-                uploadResultLocation.append(randomDistrict as! String)
-                uploadResultLocation.append(randomType as! String)
-                uploadResultLocation.append(randomMoney as! String)
-            }
-            totalMoney = (Int(uploadResultLocation[3]) ?? 0)+(Int(uploadResultLocation[7]) ?? 0)+(Int(uploadResultLocation[11]) ?? 0)
+                totalMoney = (Int(uploadResultLocation[3]) ?? 0)+(Int(uploadResultLocation[9]) ?? 0)+(Int(uploadResultLocation[15]) ?? 0)
+            }while (Int(requireMoney) < totalMoney)
         }
     }
 }

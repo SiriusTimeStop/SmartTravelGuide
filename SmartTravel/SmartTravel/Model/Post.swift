@@ -24,6 +24,12 @@ struct Post : Identifiable,Codable{
     var locationMoney1: String
     var locationMoney2: String
     var locationMoney3: String
+    var locationLot1: String
+    var locationLot2: String
+    var locationLot3: String
+    var locationLon1: String
+    var locationLon2: String
+    var locationLon3: String
     var locationTotoalMoney: String
     var publishedDate: Date = Date()
     var liskedIDs: [String] = []
@@ -49,6 +55,12 @@ struct Post : Identifiable,Codable{
         case locationMoney1
         case locationMoney2
         case locationMoney3
+        case locationLot1
+        case locationLot2
+        case locationLot3
+        case locationLon1
+        case locationLon2
+        case locationLon3
         case locationTotoalMoney
         case publishedDate
         case liskedIDs

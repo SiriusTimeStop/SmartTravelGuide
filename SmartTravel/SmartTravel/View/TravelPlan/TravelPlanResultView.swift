@@ -110,10 +110,10 @@ struct TravelPlanResultView: View {
                         .cornerRadius(20)
                     
                     VStack(alignment:.center){
-                        Image(uploadResultLocation[4])
+                        Image(uploadResultLocation[6])
                             .resizable()
                         
-                        Text(uploadResultLocation[4])
+                        Text(uploadResultLocation[6])
                             .font(.system(size: 13,weight: .semibold))
                             .frame(maxWidth: .infinity,alignment:.leading)
                             .padding(.leading,25)
@@ -125,7 +125,7 @@ struct TravelPlanResultView: View {
                                 .frame(width: 5, height: 12)
                                 .foregroundColor(.black)
                                 .font(.system(size: 13,weight: .semibold))
-                            Text(uploadResultLocation[5])
+                            Text(uploadResultLocation[7])
                                 .foregroundColor(.gray)
                                 .padding(.leading,1)
                                 .font(.system(size: 13,weight: .semibold))
@@ -133,7 +133,7 @@ struct TravelPlanResultView: View {
                         .frame(maxWidth: .infinity,alignment:.leading)
                         .padding(.leading,30)
                         .padding(.bottom,5)
-                        Text("$\(uploadResultLocation[7])")
+                        Text("$\(uploadResultLocation[9])")
                             .font(.system(size: 13,weight: .semibold))
                             .padding(.bottom,18)
                             .frame(maxWidth: .infinity,alignment:.leading)
@@ -146,10 +146,10 @@ struct TravelPlanResultView: View {
                     .cornerRadius(20)
                     
                     VStack(alignment:.center){
-                        Image(uploadResultLocation[8])
+                        Image(uploadResultLocation[12])
                             .resizable()
                         
-                        Text(uploadResultLocation[8])
+                        Text(uploadResultLocation[12])
                             .font(.system(size: 13,weight: .semibold))
                             .frame(maxWidth: .infinity,alignment:.leading)
                             .padding(.leading,25)
@@ -161,7 +161,7 @@ struct TravelPlanResultView: View {
                                 .frame(width: 5, height: 12)
                                 .foregroundColor(.black)
                                 .font(.system(size: 13,weight: .semibold))
-                            Text(uploadResultLocation[9])
+                            Text(uploadResultLocation[13])
                                 .foregroundColor(.gray)
                                 .padding(.leading,1)
                                 .font(.system(size: 13,weight: .semibold))
@@ -169,7 +169,7 @@ struct TravelPlanResultView: View {
                         .frame(maxWidth: .infinity,alignment:.leading)
                         .padding(.leading,30)
                         .padding(.bottom,5)
-                        Text("$\(uploadResultLocation[11])")
+                        Text("$\(uploadResultLocation[15])")
                             .font(.system(size: 13,weight: .semibold))
                             .padding(.bottom,18)
                             .frame(maxWidth: .infinity,alignment:.leading)
@@ -218,8 +218,7 @@ struct TravelPlanResultView: View {
             do{
                 guard let profileURL = profileURL else{return}
                 
-                ///  Create post object
-                let post = Post(location1: uploadResultLocation[0], location2: uploadResultLocation[4], location3: uploadResultLocation[8], locationDistrict1: uploadResultLocation[1], locationDistrict2: uploadResultLocation[5], locationDistrict3: uploadResultLocation[9], locationType1: uploadResultLocation[2], locationType2: uploadResultLocation[6], locationType3: uploadResultLocation[10],locationRandomType: requireType, locationMoney1: uploadResultLocation[3], locationMoney2: uploadResultLocation[7], locationMoney3: uploadResultLocation[11], locationTotoalMoney: String(totalMoney), userName: userName, userUID: userUID, userProfileURL: profileURL)
+                let post = Post(location1: uploadResultLocation[0], location2: uploadResultLocation[6], location3: uploadResultLocation[12], locationDistrict1: uploadResultLocation[1], locationDistrict2: uploadResultLocation[7], locationDistrict3: uploadResultLocation[13], locationType1: uploadResultLocation[2], locationType2: uploadResultLocation[8], locationType3: uploadResultLocation[14], locationRandomType: requireType, locationMoney1: uploadResultLocation[3], locationMoney2: uploadResultLocation[9], locationMoney3: uploadResultLocation[15], locationLot1: uploadResultLocation[4], locationLot2: uploadResultLocation[10], locationLot3: uploadResultLocation[16], locationLon1: uploadResultLocation[5], locationLon2: uploadResultLocation[11], locationLon3: uploadResultLocation[17], locationTotoalMoney: String(totalMoney), userName: userName, userUID: userUID, userProfileURL: profileURL)
                 
                 try await createDocumentAtFirebase(post)
             }catch{

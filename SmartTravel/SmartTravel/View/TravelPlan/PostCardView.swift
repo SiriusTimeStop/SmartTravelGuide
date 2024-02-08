@@ -7,12 +7,18 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Firebase
+import FirebaseStorage
 
 struct PostCardView: View {
     var post: Post
     /// - Callbacks
     var onUpdate: (Post) -> ()
     var onDelete: () -> ()
+    
+    //MARK: view properties
+    @AppStorage("user_UID") private var userUID: String = ""
+    @State private var docListner: ListenerRegistration?
 
     var body: some View {
         HStack(alignment: .top, spacing: 12){
@@ -60,5 +66,56 @@ struct PostCardView: View {
             }
         }
         .hAlign(.leading)
+        .overlay(alignment: .topTrailing, content: {
+            //MARK: display delete button
+            if post.userUID == userUID{
+                Menu{
+                    Button("Delete Post",role:.destructive,action: deletePost)
+                }label: {
+                    Image(systemName: "ellipsis")
+                        .font(.caption)
+                        .rotationEffect(.init(degrees: -90))
+                        .foregroundColor(.black)
+                        .padding(8)
+                        .contentShape(Rectangle())
+                }
+                .offset(x:8)
+            }
+        })
+        .onAppear{
+            if docListner == nil{
+                guard let postID = post.id else{return}
+                docListner = Firestore.firestore().collection("Routes").document(postID).addSnapshotListener({
+                    snapshot, error in
+                    if let snapshot{
+                        if snapshot.exists{
+                            if let updatedPost = try? snapshot.data(as: Post.self){
+                                onUpdate(updatedPost)
+                            }
+                        }else{
+                            onDelete()
+                        }
+                    }
+                })
+            }
+        }
+        .onDisappear{
+            if let docListner{
+                docListner.remove()
+                self.docListner = nil
+            }
+        }
+    }
+    //MARK: delete post
+    func deletePost(){
+        Task{
+            
+            do{
+                guard let postID = post.id else{return}
+                try await Firestore.firestore().collection("Routes").document(postID).delete()
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
     }
 }
