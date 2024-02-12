@@ -10,20 +10,56 @@ import SwiftUI
 struct PostTravelPlanView: View {
     @State private var recentsPosts: [Post] = []
     @State private var NewTravelPlan: Bool = false
+    
     var body: some View {
         NavigationStack{
-//            Text("Extreme Travel")
-//                .font(.callout)
-//                .fontWeight(.semibold)
-//                .hAlign(.leading)
-//                .padding(.leading,15)
-//                .padding(.top,15)
-//                .foregroundColor(.blue)
-            
-            ReusablePostView(posts: $recentsPosts)
-                .hAlign(.center)
-                .vAlign(.center)
-                .navigationTitle("Routes")
+            ScrollView{
+                Text("Cultural Travel")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .hAlign(.leading)
+                    .padding(.leading,15)
+                    .padding(.top,15)
+                    .foregroundColor(.blue)
+                
+                ReusablePostView()
+                    .hAlign(.center)
+                    .vAlign(.center)
+                
+                Text("Ecotourism Travel")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .hAlign(.leading)
+                    .padding(.leading,15)
+                    .foregroundColor(.blue)
+                
+                EcotourismReusablePostView()
+                    .hAlign(.center)
+                    .vAlign(.center)
+                
+                Text("Sightseeing Travel")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .hAlign(.leading)
+                    .padding(.leading,15)
+                    .foregroundColor(.blue)
+                
+                SightReusablePostView()
+                    .hAlign(.center)
+                    .vAlign(.center)
+                
+                Text("Extreme Travel")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .hAlign(.leading)
+                    .padding(.leading,15)
+                    .foregroundColor(.blue)
+                
+                ExtremeReusablePostView()
+                    .hAlign(.center)
+                    .vAlign(.center)
+            }
+            .navigationTitle("Routes")
         }
         .overlay(alignment: .bottomTrailing) {
             Button{

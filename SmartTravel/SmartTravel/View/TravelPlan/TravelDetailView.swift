@@ -14,8 +14,14 @@ struct TravelDetailView: View {
     
     var body: some View {
         ScrollView{
+            NavigationLink(destination: MapTransportView(post: post)){
+                    Image(systemName: "bus.fill")
+                    .foregroundColor(.black)
+                }
+            .frame(width: 40,height: 40)
+            .padding()
+            
             Group{
-                
                 Map(initialPosition: .region(region)){
                     Marker(post.location1, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0))
                 }
@@ -151,6 +157,7 @@ struct TravelDetailView: View {
                 .padding(.horizontal,30)
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
+                
             }
         }
     }
@@ -165,6 +172,7 @@ struct TravelDetailView: View {
     private var region3: MKCoordinateRegion{
         MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     }
+    
 }
 
 

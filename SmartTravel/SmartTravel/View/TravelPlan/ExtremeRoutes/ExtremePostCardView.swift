@@ -1,8 +1,8 @@
 //
-//  PostCardView.swift
+//  ExtremePostCardView.swift
 //  SmartTravel
 //
-//  Created by jackychoi on 3/2/2024.
+//  Created by jackychoi on 12/2/2024.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 import Firebase
 import FirebaseStorage
 
-struct PostCardView: View {
+struct ExtremePostCardView: View {
     var post: Post
     /// - Callbacks
     var onUpdate: (Post) -> ()
@@ -85,7 +85,7 @@ struct PostCardView: View {
         .onAppear{
             if docListner == nil{
                 guard let postID = post.id else{return}
-                docListner = Firestore.firestore().collection("Routes").document(postID).addSnapshotListener({
+                docListner = Firestore.firestore().collection("Extreme Routes").document(postID).addSnapshotListener({
                     snapshot, error in
                     if let snapshot{
                         if snapshot.exists{
@@ -112,10 +112,11 @@ struct PostCardView: View {
             
             do{
                 guard let postID = post.id else{return}
-                try await Firestore.firestore().collection("Routes").document(postID).delete()
+                try await Firestore.firestore().collection("Extreme Routes").document(postID).delete()
             }catch{
                 print(error.localizedDescription)
             }
         }
     }
 }
+

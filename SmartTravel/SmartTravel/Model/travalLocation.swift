@@ -23,3 +23,12 @@ struct TravelLocation{
     
 }
 
+enum ProductType: String,CaseIterable{
+    case iphone = "iPhone"
+    case ipad = "iPad"
+    case macbook = "MacBook"
+    case desktop = "Mac Desktop"
+    case appleWatch = "Apple Watch"
+    case airpods = "Airpods"
+}
+

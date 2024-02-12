@@ -8,13 +8,14 @@
 import SwiftUI
 import Firebase
 
-struct ReusablePostSightView: View {
-    @Binding var posts: [Post]
+struct SightReusablePostView: View {
+    @State private var posts: [Post] = []
     
     /// - View properties
     @State var isFetching: Bool = true
     
     var body: some View {
+        /// - 1. horizontal
         ScrollView(.horizontal,showsIndicators: false){
             LazyVStack{
                 if isFetching{
@@ -26,9 +27,9 @@ struct ReusablePostSightView: View {
                         Text("No Post's Found")
                             .font(.caption)
                             .foregroundColor(.gray)
-                            .padding(.top,30)
+                            .padding()
                     }else{
-                        /// Displaying post
+                        /// 2. Displaying post HStack
                         HStack{
                             Posts()
                                 .padding()
@@ -55,12 +56,17 @@ struct ReusablePostSightView: View {
     func Posts() -> some View{
         ForEach(posts){post in
             NavigationLink(destination: TravelDetailView(post: post)){
-                PostCardView(post: post) { updatedPost in
+                SightPostCardView(post: post) { updatedPost in
                     
                 } onDelete: {
-                    
+                    withAnimation(.easeInOut(duration: 0.25)){
+                        posts.removeAll{post.id == $0.id}
+                    }
                 }
+
             }
+            Divider()
+                .padding(.horizontal,-15)
         }
     }
     
@@ -68,6 +74,7 @@ struct ReusablePostSightView: View {
     func fetchPosts() async{
         do{
             var query: Query!
+            /// 3. firebase collection
             query = Firestore.firestore().collection("Sightseeing Routes")
                 .order(by: "publishedDate",descending: true)
                 .limit(to: 100)
@@ -88,3 +95,4 @@ struct ReusablePostSightView: View {
 #Preview {
     ContentView()
 }
+

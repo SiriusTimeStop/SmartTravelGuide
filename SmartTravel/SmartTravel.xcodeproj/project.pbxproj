@@ -15,7 +15,13 @@
 		387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */; };
 		387055B42B6E15B6003EDD09 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B32B6E15B6003EDD09 /* PostCardView.swift */; };
 		387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B52B6E77A4003EDD09 /* TravelDetailView.swift */; };
-		387055B82B6FD0AD003EDD09 /* ReusablePostSightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */; };
+		387055B82B6FD0AD003EDD09 /* SightReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055B72B6FD0AD003EDD09 /* SightReusablePostView.swift */; };
+		387056742B79E6C6003EDD09 /* ExtremeReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056732B79E6C6003EDD09 /* ExtremeReusablePostView.swift */; };
+		387056762B79EB73003EDD09 /* ExtremePostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056752B79EB73003EDD09 /* ExtremePostCardView.swift */; };
+		3870567C2B79F27B003EDD09 /* EcotourismReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870567B2B79F27B003EDD09 /* EcotourismReusablePostView.swift */; };
+		3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870567D2B79F34D003EDD09 /* EcotourismPostCardView.swift */; };
+		387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056802B79F733003EDD09 /* SightPostCardView.swift */; };
+		387056832B7A1CE9003EDD09 /* MapTransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056822B7A1CE9003EDD09 /* MapTransportView.swift */; };
 		38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C42B612004002755EB /* SmartTravelApp.swift */; };
 		38C585C72B612004002755EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C62B612004002755EB /* ContentView.swift */; };
 		38C585C92B612006002755EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C585C82B612006002755EB /* Assets.xcassets */; };
@@ -58,7 +64,13 @@
 		387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostView.swift; sourceTree = "<group>"; };
 		387055B32B6E15B6003EDD09 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		387055B52B6E77A4003EDD09 /* TravelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDetailView.swift; sourceTree = "<group>"; };
-		387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePostSightView.swift; sourceTree = "<group>"; };
+		387055B72B6FD0AD003EDD09 /* SightReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightReusablePostView.swift; sourceTree = "<group>"; };
+		387056732B79E6C6003EDD09 /* ExtremeReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremeReusablePostView.swift; sourceTree = "<group>"; };
+		387056752B79EB73003EDD09 /* ExtremePostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtremePostCardView.swift; sourceTree = "<group>"; };
+		3870567B2B79F27B003EDD09 /* EcotourismReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcotourismReusablePostView.swift; sourceTree = "<group>"; };
+		3870567D2B79F34D003EDD09 /* EcotourismPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcotourismPostCardView.swift; sourceTree = "<group>"; };
+		387056802B79F733003EDD09 /* SightPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightPostCardView.swift; sourceTree = "<group>"; };
+		387056822B7A1CE9003EDD09 /* MapTransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTransportView.swift; sourceTree = "<group>"; };
 		38C585C12B612004002755EB /* SmartTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C585C42B612004002755EB /* SmartTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTravelApp.swift; sourceTree = "<group>"; };
 		38C585C62B612004002755EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,15 +139,53 @@
 		387055A82B67A3CD003EDD09 /* TravelPlan */ = {
 			isa = PBXGroup;
 			children = (
+				3870567F2B79F377003EDD09 /* SightRoutes */,
+				387056792B79F244003EDD09 /* EcotourismRoutes */,
+				387056782B79F1BA003EDD09 /* CulturalRoutes */,
+				387056772B79F1A2003EDD09 /* ExtremeRoutes */,
 				387055A92B67A407003EDD09 /* TravelPlanView.swift */,
 				387055AD2B6BA4A9003EDD09 /* TravelPlanResultView.swift */,
 				387055AF2B6D36D3003EDD09 /* PostTravelPlanView.swift */,
-				387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */,
-				387055B32B6E15B6003EDD09 /* PostCardView.swift */,
 				387055B52B6E77A4003EDD09 /* TravelDetailView.swift */,
-				387055B72B6FD0AD003EDD09 /* ReusablePostSightView.swift */,
+				387056822B7A1CE9003EDD09 /* MapTransportView.swift */,
 			);
 			path = TravelPlan;
+			sourceTree = "<group>";
+		};
+		387056772B79F1A2003EDD09 /* ExtremeRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				387056732B79E6C6003EDD09 /* ExtremeReusablePostView.swift */,
+				387056752B79EB73003EDD09 /* ExtremePostCardView.swift */,
+			);
+			path = ExtremeRoutes;
+			sourceTree = "<group>";
+		};
+		387056782B79F1BA003EDD09 /* CulturalRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */,
+				387055B32B6E15B6003EDD09 /* PostCardView.swift */,
+			);
+			path = CulturalRoutes;
+			sourceTree = "<group>";
+		};
+		387056792B79F244003EDD09 /* EcotourismRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				3870567B2B79F27B003EDD09 /* EcotourismReusablePostView.swift */,
+				3870567D2B79F34D003EDD09 /* EcotourismPostCardView.swift */,
+			);
+			path = EcotourismRoutes;
+			sourceTree = "<group>";
+		};
+		3870567F2B79F377003EDD09 /* SightRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				387055B72B6FD0AD003EDD09 /* SightReusablePostView.swift */,
+				387056802B79F733003EDD09 /* SightPostCardView.swift */,
+			);
+			path = SightRoutes;
 			sourceTree = "<group>";
 		};
 		38C585B82B612004002755EB = {
@@ -340,20 +390,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */,
 				38C585C72B612004002755EB /* ContentView.swift in Sources */,
 				38C586012B612080002755EB /* MainView.swift in Sources */,
 				38C586002B612080002755EB /* Home.swift in Sources */,
 				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
+				387056742B79E6C6003EDD09 /* ExtremeReusablePostView.swift in Sources */,
 				38C585ED2B61206B002755EB /* RidesType.swift in Sources */,
 				387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */,
 				387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */,
+				387056832B7A1CE9003EDD09 /* MapTransportView.swift in Sources */,
 				387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */,
 				38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */,
-				387055B82B6FD0AD003EDD09 /* ReusablePostSightView.swift in Sources */,
+				387055B82B6FD0AD003EDD09 /* SightReusablePostView.swift in Sources */,
 				38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */,
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,
 				38C585E52B61206B002755EB /* DataController.swift in Sources */,
+				387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */,
+				3870567C2B79F27B003EDD09 /* EcotourismReusablePostView.swift in Sources */,
 				387055B42B6E15B6003EDD09 /* PostCardView.swift in Sources */,
 				38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */,
 				38C585E32B61206B002755EB /* View+Extensions.swift in Sources */,
@@ -372,6 +427,7 @@
 				387055B02B6D36D3003EDD09 /* PostTravelPlanView.swift in Sources */,
 				38C585E72B61206B002755EB /* LocationShow.swift in Sources */,
 				38C585EB2B61206B002755EB /* DestinationLocation.swift in Sources */,
+				387056762B79EB73003EDD09 /* ExtremePostCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

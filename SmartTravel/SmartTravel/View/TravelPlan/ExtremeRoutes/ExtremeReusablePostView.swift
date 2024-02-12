@@ -1,22 +1,22 @@
 //
-//  ReusablePostView.swift
+//  NewFileView.swift
 //  SmartTravel
 //
-//  Created by jackychoi on 3/2/2024.
+//  Created by jackychoi on 12/2/2024.
 //
 
 import SwiftUI
 import Firebase
 
-struct ReusablePostView: View {
-    @Binding var posts: [Post]
+struct ExtremeReusablePostView: View {
+    @State private var posts: [Post] = []
     
     /// - View properties
     @State var isFetching: Bool = true
     
     var body: some View {
         /// - 1. horizontal
-        ScrollView(.vertical,showsIndicators: false){
+        ScrollView(.horizontal,showsIndicators: false){
             LazyVStack{
                 if isFetching{
                     ProgressView()
@@ -27,11 +27,13 @@ struct ReusablePostView: View {
                         Text("No Post's Found")
                             .font(.caption)
                             .foregroundColor(.gray)
-                            .padding(.top,30)
+                            .padding()
                     }else{
                         /// 2. Displaying post HStack
-                        Posts()
-                            .padding()
+                        HStack{
+                            Posts()
+                                .padding()
+                        }
                     }
                 }
             }
@@ -54,7 +56,7 @@ struct ReusablePostView: View {
     func Posts() -> some View{
         ForEach(posts){post in
             NavigationLink(destination: TravelDetailView(post: post)){
-                PostCardView(post: post) { updatedPost in
+                ExtremePostCardView(post: post) { updatedPost in
                     
                 } onDelete: {
                     withAnimation(.easeInOut(duration: 0.25)){
@@ -73,7 +75,7 @@ struct ReusablePostView: View {
         do{
             var query: Query!
             /// 3. firebase collection
-            query = Firestore.firestore().collection("Routes")
+            query = Firestore.firestore().collection("Extreme Routes")
                 .order(by: "publishedDate",descending: true)
                 .limit(to: 100)
             let docs = try await query.getDocuments()
