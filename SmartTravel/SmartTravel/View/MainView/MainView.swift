@@ -12,6 +12,11 @@ struct MainView: View {
     var body: some View {
         //MARK: TabView
         TabView{
+            PostTravelPlanView()
+                .tabItem {
+                    Image(systemName: "mappin.square")
+                    Text("Route")
+                }
             Home()
                 .tabItem {
                     Image(systemName: "map")
@@ -23,11 +28,6 @@ struct MainView: View {
                     Text("Plan")
                 }
             ProfileView()
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Profile")
-                }
-            PostTravelPlanView()
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Profile")

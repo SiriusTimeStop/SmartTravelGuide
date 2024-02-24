@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F7292B8103F300E96556 /* MapRestaurantView.swift */; };
 		387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A62B6799FC003EDD09 /* travalLocation.swift */; };
 		387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A92B67A407003EDD09 /* TravelPlanView.swift */; };
 		387055AC2B6800F0003EDD09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055AB2B6800F0003EDD09 /* Post.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3817F7292B8103F300E96556 /* MapRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRestaurantView.swift; sourceTree = "<group>"; };
 		387055A62B6799FC003EDD09 /* travalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travalLocation.swift; sourceTree = "<group>"; };
 		387055A92B67A407003EDD09 /* TravelPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanView.swift; sourceTree = "<group>"; };
 		387055AB2B6800F0003EDD09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				387055AF2B6D36D3003EDD09 /* PostTravelPlanView.swift */,
 				387055B52B6E77A4003EDD09 /* TravelDetailView.swift */,
 				387056822B7A1CE9003EDD09 /* MapTransportView.swift */,
+				3817F7292B8103F300E96556 /* MapRestaurantView.swift */,
 			);
 			path = TravelPlan;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */,
 				38C585C72B612004002755EB /* ContentView.swift in Sources */,
 				38C586012B612080002755EB /* MainView.swift in Sources */,
+				3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */,
 				38C586002B612080002755EB /* Home.swift in Sources */,
 				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
 				387056742B79E6C6003EDD09 /* ExtremeReusablePostView.swift in Sources */,

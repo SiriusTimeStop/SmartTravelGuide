@@ -14,12 +14,19 @@ struct TravelDetailView: View {
     
     var body: some View {
         ScrollView{
-            NavigationLink(destination: MapTransportView(post: post)){
-                    Image(systemName: "bus.fill")
-                    .foregroundColor(.black)
-                }
-            .frame(width: 40,height: 40)
-            .padding()
+            HStack{
+                NavigationLink(destination: MapTransportView(post: post)){
+                        Image(systemName: "bus.fill")
+                        .foregroundColor(.black)
+                    }
+                .frame(width: 40,height: 40)
+                .padding()
+                
+                NavigationLink(destination: MapRestaurantView(post: post)){
+                        Image(systemName: "mug.fill")
+                        .foregroundColor(.black)
+                    }
+            }
             
             Group{
                 Map(initialPosition: .region(region)){
