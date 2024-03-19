@@ -16,7 +16,7 @@ struct ReusablePostView: View {
     
     var body: some View {
         /// - 1. horizontal
-        ScrollView(.horizontal,showsIndicators: false){
+        ScrollView(.vertical,showsIndicators: false){
             LazyVStack{
                 if isFetching{
                     ProgressView()
@@ -27,13 +27,13 @@ struct ReusablePostView: View {
                         Text("No Post's Found")
                             .font(.caption)
                             .foregroundColor(.gray)
-                            .padding(.top,30)
+                            .padding()
                     }else{
                         /// 2. Displaying post HStack
-                        HStack{
+                        
                             Posts()
-                                .padding()
-                        }
+                                .padding(5)
+                        
                     }
                 }
             }

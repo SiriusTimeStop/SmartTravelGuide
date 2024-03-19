@@ -16,7 +16,7 @@ struct ExtremeReusablePostView: View {
     
     var body: some View {
         /// - 1. horizontal
-        ScrollView(.horizontal,showsIndicators: false){
+        ScrollView(.vertical,showsIndicators: false){
             LazyVStack{
                 if isFetching{
                     ProgressView()
@@ -30,10 +30,9 @@ struct ExtremeReusablePostView: View {
                             .padding()
                     }else{
                         /// 2. Displaying post HStack
-                        HStack{
+                        
                             Posts()
-                                .padding()
-                        }
+                                .padding(5)
                     }
                 }
             }

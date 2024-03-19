@@ -63,45 +63,41 @@ struct TravelPlanView: View {
                     .fill(.gray.opacity(0.05))
                     .ignoresSafeArea()
             }
-            Text("Travel Type")
-                .font(.callout)
-                .hAlign(.leading)
+            Text("Travel Selection")
+                .font(.title2)
+                .hAlign(.center)
                 .padding()
-            Picker("Sample",selection: $requireType){
-                Text("Cultural Tourism").tag("Cultural Tourism")
-                Text("Ecotourism").tag("Ecotourism")
-                Text("Sightseeing Tourism").tag("Sightseeing Tourism")
-                Text("Extreme Travel").tag("Extreme Travel")
+            Form{
+                Section("Travel Type"){
+                    Picker("Type",selection: $requireType){
+                        Text("Cultural Tourism").tag("Cultural Tourism")
+                        Text("Ecotourism").tag("Ecotourism")
+                        Text("Sightseeing Tourism").tag("Sightseeing Tourism")
+                        Text("Extreme Travel").tag("Extreme Travel")
+                    }
+                    .pickerStyle(.menu)
+                }
+                Section("Travel District"){
+                    Picker("District",selection: $requireDistrict){
+                        Text("Kowloon").tag("Kowloon")
+                        Text("Hong Kong Island").tag("Hong Kong Island")
+                        Text("New Territories").tag("New Territories")
+                    }
+                    .pickerStyle(.menu)
+                }
+                Section("Fee Range"){
+                    Slider(value: $requireMoney,in: 0...10000,step:1)
+                        .padding()
+                    Text("$\(requireMoney.formatted())")
+                        .font(.callout)
+                        .hAlign(.center)
+                }
             }
-            .pickerStyle(.menu)
-            
-            Text("Travel District")
-                .font(.callout)
-                .hAlign(.leading)
-                .padding()
-            Picker("Sample",selection: $requireDistrict){
-                Text("Kowloon").tag("Kowloon")
-                Text("Hong Kong Island").tag("Hong Kong Island")
-                Text("New Territories").tag("New Territories")
-            }
-            .pickerStyle(.segmented)
-            
-            Text("Fee range")
-                .font(.callout)
-                .hAlign(.leading)
-                .padding()
-            
-            Slider(value: $requireMoney,in: 0...10000,step:1)
-                .padding()
             if resultStatus == true{
                 TravelPlanResultView(onPost: onPost, resultStatus: $resultStatus, uploadResultLocation: $uploadResultLocation, requireType: $requireType, totalMoney: $totalMoney)
                     .transition(.move(edge: .bottom))
-                    .padding(.horizontal)
-                    .padding(.bottom)
                     .vAlign(.top)
             }
-            Text("\(requireMoney.formatted())")
-                .font(.callout)
         }
         .vAlign(.top)
     }
@@ -160,6 +156,20 @@ struct TravelPlanView: View {
                     ///Random choose
                     var number = Int.random(in: 0...travelPlanLocationArray.count-1)
                     let randomLocation = travelPlanLocationArray[number]
+                    if c != 0{
+                        repeat{
+                            if uploadResultLocation[0] == randomLocation as! String{
+                                    number = Int.random(in: 0...travelPlanLocationArray.count-1)
+                            }
+                        }while (uploadResultLocation[0] == randomLocation as! String)
+                    }
+                    if c > 1{
+                        repeat{
+                            if uploadResultLocation[0] == randomLocation as! String || uploadResultLocation[6] == randomLocation as! String{
+                                    number = Int.random(in: 0...travelPlanLocationArray.count-1)
+                            }
+                        }while (uploadResultLocation[0] == randomLocation as! String || uploadResultLocation[6] == randomLocation as! String)
+                    }
                     let randomDistrict = travelPlanLocationDistrict[number]
                     let randomType = travelPlanLocationType[number]
                     let randomMoney = travelPlanLocationMoney[number]

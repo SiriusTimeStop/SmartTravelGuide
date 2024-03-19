@@ -54,6 +54,16 @@
 		38C586402B612A46002755EB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5863E2B612A46002755EB /* ProfileView.swift */; };
 		38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5863F2B612A46002755EB /* ReusableProfileContent.swift */; };
 		38C586442B612A89002755EB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 38C586432B612A89002755EB /* SDWebImageSwiftUI */; };
+		38DF744B2BA727D600FBED41 /* MapLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF744A2BA727D600FBED41 /* MapLocationView.swift */; };
+		38DF744D2BA72C9F00FBED41 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF744C2BA72C9F00FBED41 /* MapViewRepresentable.swift */; };
+		38DF744F2BA7338600FBED41 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF744E2BA7338600FBED41 /* LocationManager.swift */; };
+		38DF74522BA7557E00FBED41 /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF74512BA7557E00FBED41 /* LocationSearchActivationView.swift */; };
+		38DF74542BA7578100FBED41 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF74532BA7578100FBED41 /* MapViewActionButton.swift */; };
+		38DF74562BA9462700FBED41 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF74552BA9462700FBED41 /* LocationSearchView.swift */; };
+		38DF74582BA9485B00FBED41 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF74572BA9485B00FBED41 /* LocationSearchResultCell.swift */; };
+		38DF745A2BA96B9200FBED41 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF74592BA96B9200FBED41 /* LocationSearchViewModel.swift */; };
+		38DF745C2BA99D0B00FBED41 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF745B2BA99D0B00FBED41 /* MapViewState.swift */; };
+		38E001F02B8F6855009523DE /* TravelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E001EF2B8F6855009523DE /* TravelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +110,16 @@
 		38C5863B2B612202002755EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38C5863E2B612A46002755EB /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		38C5863F2B612A46002755EB /* ReusableProfileContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableProfileContent.swift; sourceTree = "<group>"; };
+		38DF744A2BA727D600FBED41 /* MapLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocationView.swift; sourceTree = "<group>"; };
+		38DF744C2BA72C9F00FBED41 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		38DF744E2BA7338600FBED41 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		38DF74512BA7557E00FBED41 /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		38DF74532BA7578100FBED41 /* MapViewActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		38DF74552BA9462700FBED41 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		38DF74572BA9485B00FBED41 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		38DF74592BA96B9200FBED41 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		38DF745B2BA99D0B00FBED41 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		38E001EF2B8F6855009523DE /* TravelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +257,7 @@
 				38C585D32B61206B002755EB /* TimeFormatting.swift */,
 				38C585D42B61206B002755EB /* View+Extensions.swift */,
 				38C585D52B61206B002755EB /* LoadingView.swift */,
+				38DF744E2BA7338600FBED41 /* LocationManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -253,6 +274,7 @@
 		38C585DA2B61206B002755EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38DF74592BA96B9200FBED41 /* LocationSearchViewModel.swift */,
 				38C585DB2B61206B002755EB /* LocationShow.swift */,
 				38C585DC2B61206B002755EB /* Place.swift */,
 				38C585DD2B61206B002755EB /* User.swift */,
@@ -260,6 +282,8 @@
 				38C585E12B61206B002755EB /* RidesType.swift */,
 				387055A62B6799FC003EDD09 /* travalLocation.swift */,
 				387055AB2B6800F0003EDD09 /* Post.swift */,
+				38E001EF2B8F6855009523DE /* TravelType.swift */,
+				38DF745B2BA99D0B00FBED41 /* MapViewState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,9 +299,9 @@
 		38C585F02B612080002755EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38DF74492BA724EC00FBED41 /* MapView */,
+				38E001EE2B8DB9C5009523DE /* ignoreView */,
 				387055A82B67A3CD003EDD09 /* TravelPlan */,
-				387055A52B67962D003EDD09 /* CoreData */,
-				387055A42B67960C003EDD09 /* Map */,
 				38C5863D2B612A46002755EB /* Profile */,
 				38C585F62B612080002755EB /* MainView */,
 				38C585F82B612080002755EB /* Login */,
@@ -309,6 +333,36 @@
 				38C5863F2B612A46002755EB /* ReusableProfileContent.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		38DF74492BA724EC00FBED41 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				38DF74502BA7551D00FBED41 /* LocationSearch */,
+				38DF744A2BA727D600FBED41 /* MapLocationView.swift */,
+				38DF74532BA7578100FBED41 /* MapViewActionButton.swift */,
+				38DF744C2BA72C9F00FBED41 /* MapViewRepresentable.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		38DF74502BA7551D00FBED41 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				38DF74572BA9485B00FBED41 /* LocationSearchResultCell.swift */,
+				38DF74512BA7557E00FBED41 /* LocationSearchActivationView.swift */,
+				38DF74552BA9462700FBED41 /* LocationSearchView.swift */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		38E001EE2B8DB9C5009523DE /* ignoreView */ = {
+			isa = PBXGroup;
+			children = (
+				387055A52B67962D003EDD09 /* CoreData */,
+				387055A42B67960C003EDD09 /* Map */,
+			);
+			path = ignoreView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +448,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */,
+				38DF745C2BA99D0B00FBED41 /* MapViewState.swift in Sources */,
 				38C585C72B612004002755EB /* ContentView.swift in Sources */,
 				38C586012B612080002755EB /* MainView.swift in Sources */,
+				38DF745A2BA96B9200FBED41 /* LocationSearchViewModel.swift in Sources */,
+				38DF744F2BA7338600FBED41 /* LocationManager.swift in Sources */,
 				3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */,
 				38C586002B612080002755EB /* Home.swift in Sources */,
 				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
@@ -403,7 +460,10 @@
 				38C585ED2B61206B002755EB /* RidesType.swift in Sources */,
 				387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */,
 				387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */,
+				38DF74582BA9485B00FBED41 /* LocationSearchResultCell.swift in Sources */,
+				38DF744D2BA72C9F00FBED41 /* MapViewRepresentable.swift in Sources */,
 				387056832B7A1CE9003EDD09 /* MapTransportView.swift in Sources */,
+				38E001F02B8F6855009523DE /* TravelType.swift in Sources */,
 				387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */,
 				38C586412B612A46002755EB /* ReusableProfileContent.swift in Sources */,
 				387055B82B6FD0AD003EDD09 /* SightReusablePostView.swift in Sources */,
@@ -411,13 +471,17 @@
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,
 				38C585E52B61206B002755EB /* DataController.swift in Sources */,
+				38DF74562BA9462700FBED41 /* LocationSearchView.swift in Sources */,
 				387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */,
 				3870567C2B79F27B003EDD09 /* EcotourismReusablePostView.swift in Sources */,
+				38DF744B2BA727D600FBED41 /* MapLocationView.swift in Sources */,
 				387055B42B6E15B6003EDD09 /* PostCardView.swift in Sources */,
 				38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */,
 				38C585E32B61206B002755EB /* View+Extensions.swift in Sources */,
 				38C585FC2B612080002755EB /* RideRequestView.swift in Sources */,
+				38DF74542BA7578100FBED41 /* MapViewActionButton.swift in Sources */,
 				387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */,
+				38DF74522BA7557E00FBED41 /* LocationSearchActivationView.swift in Sources */,
 				387055AE2B6BA4A9003EDD09 /* TravelPlanResultView.swift in Sources */,
 				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
 				38C585E82B61206B002755EB /* Place.swift in Sources */,
@@ -568,6 +632,7 @@
 				DEVELOPMENT_TEAM = 3R3569WX7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -597,6 +662,7 @@
 				DEVELOPMENT_TEAM = 3R3569WX7S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

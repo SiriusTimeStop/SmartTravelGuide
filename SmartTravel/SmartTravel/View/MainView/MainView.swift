@@ -17,15 +17,10 @@ struct MainView: View {
                     Image(systemName: "mappin.square")
                     Text("Route")
                 }
-            Home()
+            MapLocationView()
                 .tabItem {
-                    Image(systemName: "map")
+                    Image(systemName: "map.circle")
                     Text("Map")
-                }
-            TravelGuide()
-                .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("Plan")
                 }
             ProfileView()
                 .tabItem {
@@ -33,6 +28,7 @@ struct MainView: View {
                     Text("Profile")
                 }
         }
+        .accentColor(Color.init(hex: "#57BFD2",alpha: 1.0))
         .onAppear(){
             UITabBar.appearance().backgroundColor = .white
         }

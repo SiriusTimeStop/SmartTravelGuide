@@ -38,15 +38,15 @@ struct RegisterView: View{
     
     var body: some View{
         
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            verticalLayout
-        } else {
-            horizontalLayout
-        }
-    }
+//        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+//            verticalLayout
+//        } else {
+//            horizontalLayout
+//        }
+//    }
     
-    @ViewBuilder
-    private var verticalLayout: some View {
+//    @ViewBuilder
+//    private var verticalLayout: some View {
         VStack(spacing: 10){
             Text("Register")
                 .font(.largeTitle.bold())
@@ -79,7 +79,10 @@ struct RegisterView: View{
             .vAlign(.bottom)
         }
         .vAlign(.top)
-        .padding(15)
+        .padding(40)
+        .background(Image("background4")
+            .resizable()
+            .edgesIgnoringSafeArea(.all))
         .overlay(content: {
             LoadingView(show: $isLoading)
         })
@@ -104,71 +107,71 @@ struct RegisterView: View{
         .alert(errorMessage, isPresented: $showError, actions: {})
     }
     
-    @ViewBuilder
-    private var horizontalLayout: some View {
-        HStack(spacing: 20){
-            VStack(alignment: .leading,spacing: 10){
-                Text("Register")
-                    .font(.largeTitle.bold())
-                    .hAlign(.leading)
-                
-                Text("Register SmartTravel Account")
-                    .font(.title3)
-                    .hAlign(.leading)
-                
-                //MARK: register button
-                HStack{
-                    Text("Already have an account?")
-                        .foregroundColor(.gray)
-                    
-                    Button("Login Now"){
-                        dismiss()
-                    }
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                }
-                .font(.callout)
-                .hAlign(.leading)
-            }
-            VStack{
-                // MARK: for smaller size optimization
-                ViewThatFits{
-                    ScrollView(.vertical,showsIndicators: false){
-                        HelperView()
-                    }
-                    HelperView()
-                }
-            }
-        }
-        .vAlign(.top)
-        .padding(15)
-        .overlay(content: {
-            LoadingView(show: $isLoading)
-        })
-        .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
-        .onChange(of: photoItem){
-            newValue in
-            //MARK: Extracting UIImage form photoItem
-            if let newValue{
-                Task{
-                    do{
-                        guard let imageData = try await newValue.loadTransferable(type: Data.self) else{return}
-                        
-                        await MainActor.run(body: {
-                            userProfilePicData = imageData
-                        })
-                    }catch{}
-                }
-            }
-        }
-        
-        //MARK: Display alert
-        .alert(errorMessage, isPresented: $showError, actions: {})
-    }
+//    @ViewBuilder
+//    private var horizontalLayout: some View {
+//        HStack(spacing: 20){
+//            VStack(alignment: .leading,spacing: 10){
+//                Text("Register")
+//                    .font(.largeTitle.bold())
+//                    .hAlign(.leading)
+//                
+//                Text("Register SmartTravel Account")
+//                    .font(.title3)
+//                    .hAlign(.leading)
+//                
+//                //MARK: register button
+//                HStack{
+//                    Text("Already have an account?")
+//                        .foregroundColor(.gray)
+//                    
+//                    Button("Login Now"){
+//                        dismiss()
+//                    }
+//                    .fontWeight(.bold)
+//                    .foregroundColor(.black)
+//                }
+//                .font(.callout)
+//                .hAlign(.leading)
+//            }
+//            VStack{
+//                // MARK: for smaller size optimization
+//                ViewThatFits{
+//                    ScrollView(.vertical,showsIndicators: false){
+//                        HelperView()
+//                    }
+//                    HelperView()
+//                }
+//            }
+//        }
+//        .vAlign(.top)
+//        .padding(15)
+//        .overlay(content: {
+//            LoadingView(show: $isLoading)
+//        })
+//        .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
+//        .onChange(of: photoItem){
+//            newValue in
+//            //MARK: Extracting UIImage form photoItem
+//            if let newValue{
+//                Task{
+//                    do{
+//                        guard let imageData = try await newValue.loadTransferable(type: Data.self) else{return}
+//                        
+//                        await MainActor.run(body: {
+//                            userProfilePicData = imageData
+//                        })
+//                    }catch{}
+//                }
+//            }
+//        }
+//        
+//        //MARK: Display alert
+//        .alert(errorMessage, isPresented: $showError, actions: {})
+//    }
     
     @ViewBuilder
     func HelperView() -> some View{
-        VStack(spacing: verticalSizeClass == .regular ? 12 : 5){
+        VStack(spacing: verticalSizeClass == .regular ? 25 : 5){
             ZStack{
                 if let userProfilePicData, let image = UIImage(data: userProfilePicData){
                     Image(uiImage: image)
@@ -188,30 +191,76 @@ struct RegisterView: View{
             }
             .padding(.top, horizontalSizeClass == .compact ? 25 : 0)
             
-            TextField("Username",text: $userName)
-                .textContentType(.emailAddress)
-                .border(1,.gray.opacity(0.5))
-                .padding(.top, horizontalSizeClass == .compact ? 25 : 0)
-                
-            TextField("Email",text: $emailID)
-                .textContentType(.emailAddress)
-                .border(1,.gray.opacity(0.5))
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(15.0)
+                    .shadow(color: Color.black.opacity(0.1),radius: 10,x: 0.0,y: 4.0)
+                HStack(spacing:5){
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 22))
+                        .foregroundColor(.gray)
+                        .frame(width: 35)
+                    TextField("Username",text: $userName)
+                        .textContentType(.emailAddress)
+                }
+                .padding()
+            }
             
-           SecureField("Password",text: $password)
-                .textContentType(.emailAddress)
-                .border(1,.gray.opacity(0.5))
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(15.0)
+                    .shadow(color: Color.black.opacity(0.1),radius: 10,x: 0.0,y: 4.0)
+                HStack(spacing:5){
+                    Image(systemName: "envelope.fill")
+                        .font(.system(size: 22))
+                        .foregroundColor(.gray)
+                        .frame(width: 35)
+                    TextField("Email",text: $emailID)
+                        .textContentType(.emailAddress)
+                }
+                .padding()
+            }
             
-            TextField("About you (Optional)",text: $userBio)
-                .textContentType(.emailAddress)
-                .border(1,.gray.opacity(0.5))
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(15.0)
+                    .shadow(color: Color.black.opacity(0.1),radius: 10,x: 0.0,y: 4.0)
+                HStack(spacing:5){
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 22))
+                        .foregroundColor(.gray)
+                        .frame(width: 35)
+                    SecureField("Password",text: $password)
+                         .textContentType(.emailAddress)
+                }
+                .padding()
+            }
+            
+            ZStack{
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(15.0)
+                    .shadow(color: Color.black.opacity(0.1),radius: 10,x: 0.0,y: 4.0)
+                HStack(spacing:5){
+                    Image(systemName: "line.3.horizontal.circle.fill")
+                        .font(.system(size: 22))
+                        .foregroundColor(.gray)
+                        .frame(width: 35)
+                    TextField("About you (Optional)",text: $userBio)
+                        .textContentType(.emailAddress)
+                }
+                .padding()
+            }
             
             Button(action: registerUser) {
                 Text("Sign up")
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .hAlign(.center)
                     .frame(height: 54)
-                    .foregroundColor(.white)
-                    .background(.brown)
+                    .background(.black)
                     .cornerRadius(10)
                     .font(.title2)
             }
