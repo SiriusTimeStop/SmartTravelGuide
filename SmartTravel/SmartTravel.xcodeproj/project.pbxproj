@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3812DC852BADE786007931D9 /* transportationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC842BADE786007931D9 /* transportationView.swift */; };
 		3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F7292B8103F300E96556 /* MapRestaurantView.swift */; };
 		387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A62B6799FC003EDD09 /* travalLocation.swift */; };
 		387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A92B67A407003EDD09 /* TravelPlanView.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3812DC842BADE786007931D9 /* transportationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transportationView.swift; sourceTree = "<group>"; };
 		3817F7292B8103F300E96556 /* MapRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRestaurantView.swift; sourceTree = "<group>"; };
 		387055A62B6799FC003EDD09 /* travalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travalLocation.swift; sourceTree = "<group>"; };
 		387055A92B67A407003EDD09 /* TravelPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3812DC812BADE737007931D9 /* Transportation */ = {
+			isa = PBXGroup;
+			children = (
+				3812DC842BADE786007931D9 /* transportationView.swift */,
+			);
+			path = Transportation;
+			sourceTree = "<group>";
+		};
 		387055A42B67960C003EDD09 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +348,7 @@
 		38DF74492BA724EC00FBED41 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				3812DC812BADE737007931D9 /* Transportation */,
 				38DF74502BA7551D00FBED41 /* LocationSearch */,
 				38DF744A2BA727D600FBED41 /* MapLocationView.swift */,
 				38DF74532BA7578100FBED41 /* MapViewActionButton.swift */,
@@ -481,6 +492,7 @@
 				38C585FC2B612080002755EB /* RideRequestView.swift in Sources */,
 				38DF74542BA7578100FBED41 /* MapViewActionButton.swift in Sources */,
 				387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */,
+				3812DC852BADE786007931D9 /* transportationView.swift in Sources */,
 				38DF74522BA7557E00FBED41 /* LocationSearchActivationView.swift in Sources */,
 				387055AE2B6BA4A9003EDD09 /* TravelPlanResultView.swift in Sources */,
 				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
