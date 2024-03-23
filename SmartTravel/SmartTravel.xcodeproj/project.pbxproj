@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3812DC852BADE786007931D9 /* transportationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC842BADE786007931D9 /* transportationView.swift */; };
+		3812DC872BAF3F74007931D9 /* CulturalReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */; };
+		3812DC892BAF3FD2007931D9 /* CulturalPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */; };
 		3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F7292B8103F300E96556 /* MapRestaurantView.swift */; };
 		387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A62B6799FC003EDD09 /* travalLocation.swift */; };
 		387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A92B67A407003EDD09 /* TravelPlanView.swift */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		3812DC842BADE786007931D9 /* transportationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transportationView.swift; sourceTree = "<group>"; };
+		3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalReusablePostView.swift; sourceTree = "<group>"; };
+		3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalPostCardView.swift; sourceTree = "<group>"; };
 		3817F7292B8103F300E96556 /* MapRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRestaurantView.swift; sourceTree = "<group>"; };
 		387055A62B6799FC003EDD09 /* travalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travalLocation.swift; sourceTree = "<group>"; };
 		387055A92B67A407003EDD09 /* TravelPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanView.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				387056782B79F1BA003EDD09 /* CulturalRoutes */,
 				387056772B79F1A2003EDD09 /* ExtremeRoutes */,
 				387055A92B67A407003EDD09 /* TravelPlanView.swift */,
+				387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */,
+				387055B32B6E15B6003EDD09 /* PostCardView.swift */,
 				387055AD2B6BA4A9003EDD09 /* TravelPlanResultView.swift */,
 				387055AF2B6D36D3003EDD09 /* PostTravelPlanView.swift */,
 				387055B52B6E77A4003EDD09 /* TravelDetailView.swift */,
@@ -197,8 +203,8 @@
 		387056782B79F1BA003EDD09 /* CulturalRoutes */ = {
 			isa = PBXGroup;
 			children = (
-				387055B12B6DAC8D003EDD09 /* ReusablePostView.swift */,
-				387055B32B6E15B6003EDD09 /* PostCardView.swift */,
+				3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */,
+				3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */,
 			);
 			path = CulturalRoutes;
 			sourceTree = "<group>";
@@ -472,7 +478,9 @@
 				387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */,
 				387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */,
 				38DF74582BA9485B00FBED41 /* LocationSearchResultCell.swift in Sources */,
+				3812DC872BAF3F74007931D9 /* CulturalReusablePostView.swift in Sources */,
 				38DF744D2BA72C9F00FBED41 /* MapViewRepresentable.swift in Sources */,
+				3812DC892BAF3FD2007931D9 /* CulturalPostCardView.swift in Sources */,
 				387056832B7A1CE9003EDD09 /* MapTransportView.swift in Sources */,
 				38E001F02B8F6855009523DE /* TravelType.swift in Sources */,
 				387055B62B6E77A4003EDD09 /* TravelDetailView.swift in Sources */,

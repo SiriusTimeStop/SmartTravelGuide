@@ -1,14 +1,13 @@
 //
-//  ReusablePostView.swift
+//  CulturalReusablePostView.swift
 //  SmartTravel
 //
-//  Created by jackychoi on 3/2/2024.
+//  Created by jackychoi on 24/3/2024.
 //
-
 import SwiftUI
 import Firebase
 
-struct ReusablePostView: View {
+struct CulturalReusablePostView: View {
     @State private var posts: [Post] = []
     
     /// - View properties
@@ -56,7 +55,7 @@ struct ReusablePostView: View {
     func Posts() -> some View{
         ForEach(posts){post in
             NavigationLink(destination: TravelDetailView(post: post)){
-                PostCardView(post: post) { updatedPost in
+                CulturalPostCardView(post: post) { updatedPost in
                     
                 } onDelete: {
                     withAnimation(.easeInOut(duration: 0.25)){

@@ -77,7 +77,7 @@ struct PostTravelPlanView: View {
 //                        .padding(.top,15)
 //                        .foregroundColor(.blue)
                     
-                    ReusablePostView()
+                    CulturalReusablePostView()
                         .hAlign(.center)
                         .vAlign(.center)
                         .padding(10)

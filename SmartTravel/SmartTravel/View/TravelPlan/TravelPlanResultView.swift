@@ -230,15 +230,15 @@ struct TravelPlanResultView: View {
     func createDocumentAtFirebase(_ post: Post) async throws{
         /// - Writing document to firebase firestore
         var doc = Firestore.firestore().collection("Routes").document()
-        if requireType == "Cultural Tourism"{
-            doc = Firestore.firestore().collection("Cultural Routes").document()
-        }else if requireType == "Ecotourism"{
-            doc = Firestore.firestore().collection("Ecotourism Routes").document()
-        }else if requireType == "Sightseeing Tourism"{
-            doc = Firestore.firestore().collection("Sightseeing Routes").document()
-        }else{
-            doc = Firestore.firestore().collection("Extreme Routes").document()
-        }
+//        if requireType == "Cultural Tourism"{
+//            doc = Firestore.firestore().collection("Cultural Routes").document()
+//        }else if requireType == "Ecotourism"{
+//            doc = Firestore.firestore().collection("Ecotourism Routes").document()
+//        }else if requireType == "Sightseeing Tourism"{
+//            doc = Firestore.firestore().collection("Sightseeing Routes").document()
+//        }else{
+//            doc = Firestore.firestore().collection("Extreme Routes").document()
+//        }
         let _ = try doc.setData(from: post,completion: {
             error in
             if error == nil{

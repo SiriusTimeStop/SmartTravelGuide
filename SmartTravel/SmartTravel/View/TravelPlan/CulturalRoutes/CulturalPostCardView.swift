@@ -1,8 +1,8 @@
 //
-//  PostCardView.swift
+//  CulturalPostCardView.swift
 //  SmartTravel
 //
-//  Created by jackychoi on 3/2/2024.
+//  Created by jackychoi on 24/3/2024.
 //
 
 import SwiftUI
@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 import Firebase
 import FirebaseStorage
 
-struct PostCardView: View {
+struct CulturalPostCardView: View {
     var post: Post
     /// - Callbacks
     var onUpdate: (Post) -> ()
