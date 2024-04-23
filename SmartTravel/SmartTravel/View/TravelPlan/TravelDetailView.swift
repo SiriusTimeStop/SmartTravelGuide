@@ -11,31 +11,31 @@ import MapKit
 
 struct TravelDetailView: View {
     let post: Post
-    
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ScrollView{
             HStack{
+                Text("Travel Guide")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .hAlign(.leading)
                 NavigationLink(destination: MapTransportView(post: post)){
                         Image(systemName: "bus.fill")
                         .foregroundColor(.black)
                     }
+                .hAlign(.trailing)
                 .frame(width: 40,height: 40)
-                .padding()
-                
+        
                 NavigationLink(destination: MapRestaurantView(post: post)){
                         Image(systemName: "mug.fill")
                         .foregroundColor(.black)
                     }
+                .hAlign(.trailing)
+                .frame(width: 40,height: 40)
             }
-            
+            .padding(.horizontal,30)
+            .padding(.top,10)
             Group{
-                Map(initialPosition: .region(region)){
-                    Marker(post.location1, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0))
-                }
-                .frame(height: 300)
-                .padding(.bottom,10)
-
-                
                 Image(post.location1)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -65,6 +65,14 @@ struct TravelDetailView: View {
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
                 
+                Map(initialPosition: .region(region)){
+                    Marker(post.location1, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0))
+                }
+                .frame(height: 300)
+                .cornerRadius(20)
+                .padding(.horizontal,30)
+                .padding(.bottom,10)
+                
                 VStack{
                     Circle()
                         .fill(.gray)
@@ -79,12 +87,6 @@ struct TravelDetailView: View {
                         .frame(width: 18,height: 18)
                 }
                 .padding(.bottom)
-                
-                Map(initialPosition: .region(region2)){
-                    Marker(post.location2, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot2) ?? 0, longitude: Double(post.locationLon2) ?? 0))
-                }
-                .frame(height: 300)
-                .padding(.bottom,10)
                 
                 Image(post.location2)
                     .resizable()
@@ -115,6 +117,14 @@ struct TravelDetailView: View {
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
                 
+                Map(initialPosition: .region(region2)){
+                    Marker(post.location2, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot2) ?? 0, longitude: Double(post.locationLon2) ?? 0))
+                }
+                .frame(height: 300)
+                .cornerRadius(20)
+                .padding(.horizontal,30)
+                .padding(.bottom,10)
+                
                 VStack{
                     Circle()
                         .fill(.gray)
@@ -129,12 +139,6 @@ struct TravelDetailView: View {
                         .frame(width: 18,height: 18)
                 }
                 .padding(.bottom)
-                
-                Map(initialPosition: .region(region3)){
-                    Marker(post.location3, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0))
-                }
-                .frame(height: 300)
-                .padding(.bottom,10)
                 
                 Image(post.location3)
                     .resizable()
@@ -165,6 +169,13 @@ struct TravelDetailView: View {
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
                 
+                Map(initialPosition: .region(region3)){
+                    Marker(post.location3, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0))
+                }
+                .frame(height: 300)
+                .cornerRadius(20)
+                .padding(.horizontal,30)
+                .padding(.bottom,10)
             }
         }
     }

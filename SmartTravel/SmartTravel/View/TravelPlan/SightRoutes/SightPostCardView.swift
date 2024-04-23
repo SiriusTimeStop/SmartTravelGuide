@@ -22,20 +22,20 @@ struct SightPostCardView: View {
 
     var body: some View {
         HStack(alignment: .top, spacing: 12){
-            WebImage(url: post.userProfileURL)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 35, height: 35)
-                .clipShape(Circle())
+//            WebImage(url: post.userProfileURL)
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: 35, height: 35)
+//                .clipShape(Circle())
             
             VStack(alignment:.leading,spacing: 6){
-                Text(post.userName)
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.black)
-                Text(post.publishedDate.formatted(date: .numeric, time: .shortened))
-                    .font(.caption2)
-                    .foregroundColor(.gray)
+//                Text(post.userName)
+//                    .font(.callout)
+//                    .fontWeight(.semibold)
+//                    .foregroundColor(.black)
+//                Text(post.publishedDate.formatted(date: .numeric, time: .shortened))
+//                    .font(.caption2)
+//                    .foregroundColor(.gray)
 //                Text(post.location1)
 //                    .textSelection(.enabled)
 //                    .padding(.vertical,8)

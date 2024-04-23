@@ -63,10 +63,12 @@ struct TravelPlanView: View {
                     .fill(.gray.opacity(0.05))
                     .ignoresSafeArea()
             }
+            
             Text("Travel Selection")
                 .font(.title2)
                 .hAlign(.center)
                 .padding()
+                .fontWeight(.bold)
             Form{
                 Section("Travel Type"){
                     Picker("Type",selection: $requireType){
@@ -75,8 +77,10 @@ struct TravelPlanView: View {
                         Text("Sightseeing Tourism").tag("Sightseeing Tourism")
                         Text("Extreme Travel").tag("Extreme Travel")
                     }
+
                     .pickerStyle(.menu)
                 }
+                
                 Section("Travel District"){
                     Picker("District",selection: $requireDistrict){
                         Text("Kowloon").tag("Kowloon")
@@ -85,6 +89,7 @@ struct TravelPlanView: View {
                     }
                     .pickerStyle(.menu)
                 }
+                
                 Section("Fee Range"){
                     Slider(value: $requireMoney,in: 0...10000,step:1)
                         .padding()
@@ -93,9 +98,16 @@ struct TravelPlanView: View {
                         .hAlign(.center)
                 }
             }
+            .padding()
+            .shadow(color: Color.secondary, radius: 3, x: 3, y: 3)
+            .background(Color(UIColor.white).ignoresSafeArea())
+            .accentColor(Color.init(hex: "#57BFD2",alpha: 1.0))
+            .scrollContentBackground(.hidden)
             if resultStatus == true{
                 TravelPlanResultView(onPost: onPost, resultStatus: $resultStatus, uploadResultLocation: $uploadResultLocation, requireType: $requireType, totalMoney: $totalMoney)
                     .transition(.move(edge: .bottom))
+                    .shadow(color: Color.secondary, radius: 5, x: 5, y: 5)
+                    .padding(.horizontal,10)
                     .vAlign(.top)
             }
         }

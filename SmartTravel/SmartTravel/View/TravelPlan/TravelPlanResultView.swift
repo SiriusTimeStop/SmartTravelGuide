@@ -203,8 +203,7 @@ struct TravelPlanResultView: View {
                 
             }
         }
-        .padding(.bottom,25)
-        .padding(.horizontal,5)
+        .padding(.bottom,35)
         .background(.white)
         .cornerRadius(20)
         .overlay {
