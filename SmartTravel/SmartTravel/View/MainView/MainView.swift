@@ -22,6 +22,13 @@ struct MainView: View {
                     Image(systemName: "map.circle")
                     Text("Map")
                 }
+            
+            PublicTransportView()
+                .tabItem {
+                    Image(systemName: "filemenu.and.selection")
+                    Text("Location")
+                }
+            
             ProfileView()
                 .tabItem {
                     Image(systemName: "gear")

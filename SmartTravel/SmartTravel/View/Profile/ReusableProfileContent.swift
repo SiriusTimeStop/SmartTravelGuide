@@ -38,7 +38,7 @@ struct ReusableProfileContent: View {
                     .hAlign(.leading)
                 }
                 
-                Text("Post's")
+                Text("Travel Plan")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)

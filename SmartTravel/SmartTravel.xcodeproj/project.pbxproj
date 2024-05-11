@@ -11,6 +11,15 @@
 		3812DC872BAF3F74007931D9 /* CulturalReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */; };
 		3812DC892BAF3FD2007931D9 /* CulturalPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */; };
 		3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F7292B8103F300E96556 /* MapRestaurantView.swift */; };
+		384355462BD7F29A000C0837 /* locationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384355452BD7F29A000C0837 /* locationDetail.swift */; };
+		384AFB7C2BEBAF2D006BC6B2 /* TransportationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7B2BEBAF2D006BC6B2 /* TransportationListView.swift */; };
+		384AFB842BEBBDDC006BC6B2 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */; };
+		384AFB852BEBBDDC006BC6B2 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */; };
+		384AFB862BEBBDDC006BC6B2 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */; };
+		384AFB872BEBBDDC006BC6B2 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB802BEBBDDC006BC6B2 /* ChatService.swift */; };
+		384AFB882BEBBDDC006BC6B2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB812BEBBDDC006BC6B2 /* ChatView.swift */; };
+		384AFB892BEBBDDC006BC6B2 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */; };
+		384AFB8C2BEBBED6006BC6B2 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 384AFB8B2BEBBED6006BC6B2 /* GoogleGenerativeAI */; };
 		387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A62B6799FC003EDD09 /* travalLocation.swift */; };
 		387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A92B67A407003EDD09 /* TravelPlanView.swift */; };
 		387055AC2B6800F0003EDD09 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055AB2B6800F0003EDD09 /* Post.swift */; };
@@ -26,6 +35,7 @@
 		3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870567D2B79F34D003EDD09 /* EcotourismPostCardView.swift */; };
 		387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056802B79F733003EDD09 /* SightPostCardView.swift */; };
 		387056832B7A1CE9003EDD09 /* MapTransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387056822B7A1CE9003EDD09 /* MapTransportView.swift */; };
+		3888CD082BEE7E2D000EFB58 /* PublicTransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888CD072BEE7E2D000EFB58 /* PublicTransportView.swift */; };
 		38C585C52B612004002755EB /* SmartTravelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C42B612004002755EB /* SmartTravelApp.swift */; };
 		38C585C72B612004002755EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C585C62B612004002755EB /* ContentView.swift */; };
 		38C585C92B612006002755EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C585C82B612006002755EB /* Assets.xcassets */; };
@@ -74,6 +84,14 @@
 		3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalReusablePostView.swift; sourceTree = "<group>"; };
 		3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalPostCardView.swift; sourceTree = "<group>"; };
 		3817F7292B8103F300E96556 /* MapRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRestaurantView.swift; sourceTree = "<group>"; };
+		384355452BD7F29A000C0837 /* locationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationDetail.swift; sourceTree = "<group>"; };
+		384AFB7B2BEBAF2D006BC6B2 /* TransportationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationListView.swift; sourceTree = "<group>"; };
+		384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		384AFB802BEBBDDC006BC6B2 /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		384AFB812BEBBDDC006BC6B2 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		387055A62B6799FC003EDD09 /* travalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travalLocation.swift; sourceTree = "<group>"; };
 		387055A92B67A407003EDD09 /* TravelPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanView.swift; sourceTree = "<group>"; };
 		387055AB2B6800F0003EDD09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -89,6 +107,7 @@
 		3870567D2B79F34D003EDD09 /* EcotourismPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcotourismPostCardView.swift; sourceTree = "<group>"; };
 		387056802B79F733003EDD09 /* SightPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightPostCardView.swift; sourceTree = "<group>"; };
 		387056822B7A1CE9003EDD09 /* MapTransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTransportView.swift; sourceTree = "<group>"; };
+		3888CD072BEE7E2D000EFB58 /* PublicTransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportView.swift; sourceTree = "<group>"; };
 		38C585C12B612004002755EB /* SmartTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C585C42B612004002755EB /* SmartTravelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTravelApp.swift; sourceTree = "<group>"; };
 		38C585C62B612004002755EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +155,7 @@
 				38C586442B612A89002755EB /* SDWebImageSwiftUI in Frameworks */,
 				38C5861E2B61215B002755EB /* FirebaseFirestore in Frameworks */,
 				38C586222B61215B002755EB /* FirebaseFirestoreSwift in Frameworks */,
+				384AFB8C2BEBBED6006BC6B2 /* GoogleGenerativeAI in Frameworks */,
 				38C586122B61215B002755EB /* FirebaseAuth in Frameworks */,
 				38C586382B61215C002755EB /* FirebaseStorage in Frameworks */,
 			);
@@ -150,6 +170,20 @@
 				3812DC842BADE786007931D9 /* transportationView.swift */,
 			);
 			path = Transportation;
+			sourceTree = "<group>";
+		};
+		384AFB832BEBBDDC006BC6B2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */,
+				384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */,
+				384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */,
+				384AFB802BEBBDDC006BC6B2 /* ChatService.swift */,
+				384AFB812BEBBDDC006BC6B2 /* ChatView.swift */,
+				384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */,
+			);
+			name = Chat;
+			path = "../../../../Desktop/Hd project/Main project items/SmartPaint/SmartPaint/SmartPaint/View/Chat";
 			sourceTree = "<group>";
 		};
 		387055A42B67960C003EDD09 /* Map */ = {
@@ -227,6 +261,14 @@
 			path = SightRoutes;
 			sourceTree = "<group>";
 		};
+		3888CD042BEE7888000EFB58 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3888CD072BEE7E2D000EFB58 /* PublicTransportView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		38C585B82B612004002755EB = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +342,7 @@
 				387055AB2B6800F0003EDD09 /* Post.swift */,
 				38E001EF2B8F6855009523DE /* TravelType.swift */,
 				38DF745B2BA99D0B00FBED41 /* MapViewState.swift */,
+				384355452BD7F29A000C0837 /* locationDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +358,8 @@
 		38C585F02B612080002755EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3888CD042BEE7888000EFB58 /* Map */,
+				384AFB832BEBBDDC006BC6B2 /* Chat */,
 				38DF74492BA724EC00FBED41 /* MapView */,
 				38E001EE2B8DB9C5009523DE /* ignoreView */,
 				387055A82B67A3CD003EDD09 /* TravelPlan */,
@@ -369,6 +414,7 @@
 				38DF74572BA9485B00FBED41 /* LocationSearchResultCell.swift */,
 				38DF74512BA7557E00FBED41 /* LocationSearchActivationView.swift */,
 				38DF74552BA9462700FBED41 /* LocationSearchView.swift */,
+				384AFB7B2BEBAF2D006BC6B2 /* TransportationListView.swift */,
 			);
 			path = LocationSearch;
 			sourceTree = "<group>";
@@ -404,6 +450,7 @@
 				38C586212B61215B002755EB /* FirebaseFirestoreSwift */,
 				38C586372B61215C002755EB /* FirebaseStorage */,
 				38C586432B612A89002755EB /* SDWebImageSwiftUI */,
+				384AFB8B2BEBBED6006BC6B2 /* GoogleGenerativeAI */,
 			);
 			productName = SmartTravel;
 			productReference = 38C585C12B612004002755EB /* SmartTravel.app */;
@@ -436,6 +483,7 @@
 			packageReferences = (
 				38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				38C586422B612A89002755EB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				384AFB8A2BEBBED6006BC6B2 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = 38C585C22B612004002755EB /* Products */;
 			projectDirPath = "";
@@ -453,6 +501,7 @@
 			files = (
 				38C585CC2B612006002755EB /* Preview Assets.xcassets in Resources */,
 				38C5863C2B612202002755EB /* GoogleService-Info.plist in Resources */,
+				384AFB892BEBBDDC006BC6B2 /* GenerativeAI-Info.plist in Resources */,
 				38C585C92B612006002755EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +515,8 @@
 			files = (
 				3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */,
 				38DF745C2BA99D0B00FBED41 /* MapViewState.swift in Sources */,
+				384AFB882BEBBDDC006BC6B2 /* ChatView.swift in Sources */,
+				3888CD082BEE7E2D000EFB58 /* PublicTransportView.swift in Sources */,
 				38C585C72B612004002755EB /* ContentView.swift in Sources */,
 				38C586012B612080002755EB /* MainView.swift in Sources */,
 				38DF745A2BA96B9200FBED41 /* LocationSearchViewModel.swift in Sources */,
@@ -489,7 +540,9 @@
 				38C585FE2B612080002755EB /* ShowPlanDetailView.swift in Sources */,
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,
+				384355462BD7F29A000C0837 /* locationDetail.swift in Sources */,
 				38C585E52B61206B002755EB /* DataController.swift in Sources */,
+				384AFB872BEBBDDC006BC6B2 /* ChatService.swift in Sources */,
 				38DF74562BA9462700FBED41 /* LocationSearchView.swift in Sources */,
 				387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */,
 				3870567C2B79F27B003EDD09 /* EcotourismReusablePostView.swift in Sources */,
@@ -502,6 +555,7 @@
 				387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */,
 				3812DC852BADE786007931D9 /* transportationView.swift in Sources */,
 				38DF74522BA7557E00FBED41 /* LocationSearchActivationView.swift in Sources */,
+				384AFB842BEBBDDC006BC6B2 /* APIKey.swift in Sources */,
 				387055AE2B6BA4A9003EDD09 /* TravelPlanResultView.swift in Sources */,
 				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
 				38C585E82B61206B002755EB /* Place.swift in Sources */,
@@ -514,8 +568,11 @@
 				387055AC2B6800F0003EDD09 /* Post.swift in Sources */,
 				387055B02B6D36D3003EDD09 /* PostTravelPlanView.swift in Sources */,
 				38C585E72B61206B002755EB /* LocationShow.swift in Sources */,
+				384AFB862BEBBDDC006BC6B2 /* ChatBubbleShape.swift in Sources */,
 				38C585EB2B61206B002755EB /* DestinationLocation.swift in Sources */,
+				384AFB7C2BEBAF2D006BC6B2 /* TransportationListView.swift in Sources */,
 				387056762B79EB73003EDD09 /* ExtremePostCardView.swift in Sources */,
+				384AFB852BEBBDDC006BC6B2 /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +782,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		384AFB8A2BEBBED6006BC6B2 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google-gemini/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
 		38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -744,6 +809,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		384AFB8B2BEBBED6006BC6B2 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 384AFB8A2BEBBED6006BC6B2 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
 		38C586112B61215B002755EB /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 38C586042B61215B002755EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

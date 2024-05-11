@@ -11,7 +11,48 @@ import MapKit
 
 struct TravelDetailView: View {
     let post: Post
+
     @Environment(\.dismiss) private var dismiss
+    
+    func testResult() -> String {
+        var text = ""
+        let number = 0
+        for x in 0...LocationDetail().nameForLocation.count-1{
+            if post.location1 != LocationDetail().nameForLocation[x]{
+                continue
+            }else{
+                text=LocationDetail().nameDetail[x]
+            }
+        }
+        return text
+    }
+    
+    func testResult2() -> String {
+        var text2 = ""
+        let number = 0
+        for x in 0...LocationDetail().nameForLocation.count-1{
+            if post.location2 != LocationDetail().nameForLocation[x]{
+                continue
+            }else{
+                text2=LocationDetail().nameDetail[x]
+            }
+        }
+        return text2
+    }
+    
+    func testResult3() -> String {
+        var text3 = ""
+        let number = 0
+        for x in 0...LocationDetail().nameForLocation.count-1{
+            if post.location3 != LocationDetail().nameForLocation[x]{
+                continue
+            }else{
+                text3=LocationDetail().nameDetail[x]
+            }
+        }
+        return text3
+    }
+    
     var body: some View {
         ScrollView{
             HStack{
@@ -20,16 +61,16 @@ struct TravelDetailView: View {
                     .font(.title)
                     .hAlign(.leading)
                 NavigationLink(destination: MapTransportView(post: post)){
-                        Image(systemName: "bus.fill")
+                    Image(systemName: "bus.fill")
                         .foregroundColor(.black)
-                    }
+                }
                 .hAlign(.trailing)
                 .frame(width: 40,height: 40)
-        
+                
                 NavigationLink(destination: MapRestaurantView(post: post)){
-                        Image(systemName: "mug.fill")
+                    Image(systemName: "mug.fill")
                         .foregroundColor(.black)
-                    }
+                }
                 .hAlign(.trailing)
                 .frame(width: 40,height: 40)
             }
@@ -64,6 +105,10 @@ struct TravelDetailView: View {
                 .padding(.horizontal,30)
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
+                
+                Text(testResult())
+                    .padding(.horizontal,30)
+                    .padding(.bottom)
                 
                 Map(initialPosition: .region(region)){
                     Marker(post.location1, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0))
@@ -117,6 +162,10 @@ struct TravelDetailView: View {
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
                 
+                Text(testResult2())
+                    .padding(.horizontal,30)
+                    .padding(.bottom)
+                
                 Map(initialPosition: .region(region2)){
                     Marker(post.location2, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot2) ?? 0, longitude: Double(post.locationLon2) ?? 0))
                 }
@@ -169,6 +218,10 @@ struct TravelDetailView: View {
                 .frame(maxWidth: .infinity,alignment: .leading)
                 .padding(.bottom)
                 
+                Text(testResult3())
+                    .padding(.horizontal,30)
+                    .padding(.bottom)
+                
                 Map(initialPosition: .region(region3)){
                     Marker(post.location3, coordinate: CLLocationCoordinate2D(latitude: Double(post.locationLot3) ?? 0, longitude: Double(post.locationLon3) ?? 0))
                 }
@@ -179,6 +232,7 @@ struct TravelDetailView: View {
             }
         }
     }
+    
     private var region: MKCoordinateRegion{
         MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: Double(post.locationLot1) ?? 0, longitude: Double(post.locationLon1) ?? 0), span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     }

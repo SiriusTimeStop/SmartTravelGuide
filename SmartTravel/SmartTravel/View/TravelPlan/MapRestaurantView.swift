@@ -40,18 +40,18 @@ struct MapRestaurantView: View {
                             if mapItem == routeDestination {
                                 let placemark = mapItem.placemark
                                 Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                    .tint(.blue)
+                                    .tint(Color(hex:"#57BFD2"))
                             }
                         }else{
                             let placemark = mapItem.placemark
                             Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                .tint(.blue)
+                                .tint(Color(hex:"#57BFD2"))
                         }
                     }
                     /// Display Route using Polyline
                     if let route {
                         MapPolyline(route.polyline)
-                            .stroke(.blue, lineWidth: 7)
+                            .stroke(Color(hex:"#57BFD2"), lineWidth: 7)
                     }
                     
                     /// to show user current location
@@ -373,19 +373,19 @@ struct MapRestaurantView: View {
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical,12)
-                .background(.blue.gradient,in: .rect(cornerRadius: 15))
+                .background(Color(hex:"#57BFD2"),in: .rect(cornerRadius: 15))
             }else if number == 1{
                 Button("Get Directions",action: fetchRoute2)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical,12)
-                .background(.blue.gradient,in: .rect(cornerRadius: 15))
+                .background(Color(hex:"#57BFD2"),in: .rect(cornerRadius: 15))
             }else if number == 2{
                 Button("Get Directions",action: fetchRoute3)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical,12)
-                .background(.blue.gradient,in: .rect(cornerRadius: 15))
+                .background(Color(hex:"#57BFD2"),in: .rect(cornerRadius: 15))
             }
         }
         .padding(15)
@@ -402,6 +402,7 @@ struct MapRestaurantView: View {
         }else if number == 1{
             request.naturalLanguageQuery = searchText
             request.region = viewingRegion ?? region2
+            
         }else if number == 2{
             request.naturalLanguageQuery = searchText
             request.region = viewingRegion ?? region3

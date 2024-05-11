@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapLocationView: View {
 //    @State private var showLocationSearchView = false
@@ -34,8 +35,8 @@ struct MapLocationView: View {
             }
             
             if mapState == .locationSelected{
-               transportationView()
-                    .transition(.move(edge: .bottom))
+//                ChatView(endLocationtext:$mapState)
+//                    .transition(.move(edge: .bottom))
             }
         }
         .edgesIgnoringSafeArea(.bottom)
