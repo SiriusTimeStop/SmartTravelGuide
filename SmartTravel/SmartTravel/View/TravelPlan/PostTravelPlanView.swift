@@ -69,49 +69,24 @@ struct PostTravelPlanView: View {
                 }
                 .scrollIndicators(.hidden)
                 if selectTravelType == .Cultural{
-//                    Text("Cultural Travel")
-//                        .font(.callout)
-//                        .fontWeight(.semibold)
-//                        .hAlign(.leading)
-//                        .padding(.leading,15)
-//                        .padding(.top,15)
-//                        .foregroundColor(.blue)
                     
                     CulturalReusablePostView()
                         .hAlign(.center)
                         .vAlign(.center)
                         .padding(10)
                 }else if selectTravelType == .Ecotourism{
-//                    Text("Ecotourism Travel")
-//                        .font(.callout)
-//                        .fontWeight(.semibold)
-//                        .hAlign(.leading)
-//                        .padding(.leading,15)
-//                        .foregroundColor(.blue)
                     
                     EcotourismReusablePostView()
                         .hAlign(.center)
                         .vAlign(.center)
                         .padding(10)
                 }else if selectTravelType == .Sightseeing{
-//                    Text("Sightseeing Travel")
-//                        .font(.callout)
-//                        .fontWeight(.semibold)
-//                        .hAlign(.leading)
-//                        .padding(.leading,15)
-//                        .foregroundColor(.blue)
                     
                     SightReusablePostView()
                         .hAlign(.center)
                         .vAlign(.center)
                         .padding(10)
                 }else if selectTravelType == .Extreme{
-//                    Text("Extreme Travel")
-//                        .font(.callout)
-//                        .fontWeight(.semibold)
-//                        .hAlign(.leading)
-//                        .padding(.leading,15)
-//                        .foregroundColor(.blue)
                     
                     ExtremeReusablePostView()
                         .hAlign(.center)

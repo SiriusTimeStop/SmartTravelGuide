@@ -39,12 +39,12 @@ struct MapRestaurantView: View {
                         if routeDisplaying{
                             if mapItem == routeDestination {
                                 let placemark = mapItem.placemark
-                                Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
+                                Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
                                     .tint(Color(hex:"#57BFD2"))
                             }
                         }else{
                             let placemark = mapItem.placemark
-                            Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
+                            Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
                                 .tint(Color(hex:"#57BFD2"))
                         }
                     }
@@ -142,19 +142,19 @@ struct MapRestaurantView: View {
                         if routeDisplaying{
                             if mapItem == routeDestination {
                                 let placemark = mapItem.placemark
-                                Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                    .tint(.blue)
+                                Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
+                                    .tint(Color(hex:"#57BFD2"))
                             }
                         }else{
                             let placemark = mapItem.placemark
-                            Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                .tint(.blue)
+                            Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
+                                .tint(Color(hex:"#57BFD2"))
                         }
                     }
                     /// Display Route using Polyline
                     if let route {
                         MapPolyline(route.polyline)
-                            .stroke(.blue, lineWidth: 7)
+                            .stroke(Color(hex:"#57BFD2"), lineWidth: 7)
                     }
                     
                     /// to show user current location
@@ -243,19 +243,19 @@ struct MapRestaurantView: View {
                         if routeDisplaying{
                             if mapItem == routeDestination {
                                 let placemark = mapItem.placemark
-                                Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                    .tint(.blue)
+                                Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
+                                    .tint(Color(hex:"#57BFD2"))
                             }
                         }else{
                             let placemark = mapItem.placemark
-                            Marker(placemark.name ?? "Place",coordinate: placemark.coordinate)
-                                .tint(.blue)
+                            Marker(placemark.name ?? "Place",systemImage:"fork.knife.circle.fill",coordinate: placemark.coordinate)
+                                .tint(Color(hex:"#57BFD2"))
                         }
                     }
                     /// Display Route using Polyline
                     if let route {
                         MapPolyline(route.polyline)
-                            .stroke(.blue, lineWidth: 7)
+                            .stroke(Color(hex:"#57BFD2"), lineWidth: 7)
                     }
                     
                     /// to show user current location

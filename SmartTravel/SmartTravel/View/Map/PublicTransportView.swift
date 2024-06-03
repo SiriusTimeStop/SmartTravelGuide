@@ -95,18 +95,18 @@ struct PublicTransportView: View {
             }
         }
 }
-//struct mtrPlace: Identifiable{
-//    let id = UUID()
-//    let name: String
-//    let coordinate: CLLocationCoordinate2D
-//}
-//
-////create model class
-//class ResponseModel: Codable,Identifiable{
-//    var English_Name: String? = ""
-//    var Lat: String? = ""
-//    var Lng: String? = ""
-//}
+struct mtrPlace: Identifiable{
+    let id = UUID()
+    let name: String
+    let coordinate: CLLocationCoordinate2D
+}
+
+//create model class
+class ResponseModel: Codable,Identifiable{
+    var English_Name: String? = ""
+    var Lat: String? = ""
+    var Lng: String? = ""
+}
 
 #Preview {
     PublicTransportView()

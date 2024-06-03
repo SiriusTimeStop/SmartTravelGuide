@@ -31,86 +31,7 @@ struct LoginView: View {
     @AppStorage("user_UID") var userUID: String = ""
     
     var body: some View {
-//        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-//            verticalLayout
-//        } else {
-//            horizontalLayout
-//        }
-//    }
-//    
-//    @ViewBuilder
-//    private var horizontalLayout: some View {
-//        HStack(spacing: 20) {
-//            VStack(alignment: .leading, spacing: 10) {
-//                Text("SmartTravel")
-//                    .font(.largeTitle.bold())
-//                
-//                Text("Sign In SmartTravel Account")
-//                    .font(.title3)
-//                
-//                Image("AppLogo")
-//                    .resizable()
-//                    .scaledToFit()
-//            }
-//            
-//            VStack(spacing: 12) {
-//                TextField("Email",text: $emailID)
-//                    .textContentType(.emailAddress)
-//                    .border(1,.gray.opacity(0.5))
-//                    .padding(.top,25)
-//                
-//                SecureField("Password",text: $password)
-//                    .textContentType(.emailAddress)
-//                    .border(1,.gray.opacity(0.5))
-//                
-//                Button("Reset password?",action: resetPassword)
-//                    .font(.callout)
-//                    .fontWeight(.medium)
-//                    .tint(.black)
-//                
-//                Button {
-//                    loginUser()
-//                } label: {
-//                    Text("Sign in")
-//                        .foregroundColor(.black)
-//                        .hAlign(.center)
-//                        .frame(height: 54)
-//                        .foregroundColor(.white)
-//                        .background(.brown)
-//                        .cornerRadius(10)
-//                        .font(.title2)
-//                }
-//                .padding(.top,10)
-//                
-//                //MARK: register button
-//                HStack{
-//                    Text("Don't have an account?")
-//                        .foregroundColor(.gray)
-//                    
-//                    Button("Register Now"){
-//                        createAccount.toggle()
-//                    }
-//                    .fontWeight(.bold)
-//                    .foregroundColor(.black)
-//                }
-//                .font(.callout)
-//                .vAlign(.bottom)
-//            }
-//        }
-//        .padding(15)
-//        .overlay(content: {
-//            LoadingView(show: $isLoading)
-//        })
-//        //MARK: register view via sheets
-//        .fullScreenCover(isPresented: $createAccount){
-//            RegisterView()
-//        }
-//        //MARK: Display alert
-//        .alert(errorMessage,isPresented: $showError, actions: {})
-//    }
-    
-//    @ViewBuilder
-//    private var verticalLayout: some View {
+
         VStack(spacing: 30){
             Text("SmartTravel")
                 .font(.system(size: 46).bold())
@@ -163,7 +84,13 @@ struct LoginView: View {
                     .fontWeight(.medium)
                     .tint(.black)
                     .hAlign(.trailing)
-                    
+                    .alert(isPresented: $showError) {
+                        Alert(
+                            title: Text("Error"),
+                            message: Text(errorMessage),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                 
                 Button {
                     loginUser()
@@ -230,10 +157,16 @@ struct LoginView: View {
             do{
                 try await Auth.auth().sendPasswordReset(withEmail: emailID)
                 print("Link Sent")
+                await showAlert(title: "Password Reset", message: "A password reset link has been sent to your email.")
             }catch{
                 await setError(error)
             }
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        errorMessage = message
+        showError = true
     }
     
     //MARK: if user if found then fetching user data from firestore

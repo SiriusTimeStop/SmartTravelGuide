@@ -17,16 +17,17 @@ struct MainView: View {
                     Image(systemName: "mappin.square")
                     Text("Route")
                 }
-            MapLocationView()
+            
+            SearchPublicTransportView()
                 .tabItem {
-                    Image(systemName: "map.circle")
-                    Text("Map")
+                    Image(systemName: "tram")
+                    Text("Transport")
                 }
             
-            PublicTransportView()
+            ChatView()
                 .tabItem {
-                    Image(systemName: "filemenu.and.selection")
-                    Text("Location")
+                    Image(systemName: "bubble.left.and.text.bubble.right")
+                    Text("AI Help")
                 }
             
             ProfileView()
