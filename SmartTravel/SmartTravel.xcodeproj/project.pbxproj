@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		3812DC872BAF3F74007931D9 /* CulturalReusablePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */; };
 		3812DC892BAF3FD2007931D9 /* CulturalPostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */; };
+		381717802C1DCB3E0099BB2F /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817177A2C1DCB3E0099BB2F /* ChatService.swift */; };
+		381717812C1DCB3E0099BB2F /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817177B2C1DCB3E0099BB2F /* ChatBubble.swift */; };
+		381717822C1DCB3E0099BB2F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817177C2C1DCB3E0099BB2F /* ChatView.swift */; };
+		381717832C1DCB3E0099BB2F /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817177D2C1DCB3E0099BB2F /* APIKey.swift */; };
+		381717842C1DCB3E0099BB2F /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817177E2C1DCB3E0099BB2F /* ChatBubbleShape.swift */; };
+		381717852C1DCB3E0099BB2F /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3817177F2C1DCB3E0099BB2F /* GenerativeAI-Info.plist */; };
 		3817F72A2B8103F300E96556 /* MapRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3817F7292B8103F300E96556 /* MapRestaurantView.swift */; };
 		384355462BD7F29A000C0837 /* locationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384355452BD7F29A000C0837 /* locationDetail.swift */; };
-		384AFB842BEBBDDC006BC6B2 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */; };
-		384AFB852BEBBDDC006BC6B2 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */; };
-		384AFB862BEBBDDC006BC6B2 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */; };
-		384AFB872BEBBDDC006BC6B2 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB802BEBBDDC006BC6B2 /* ChatService.swift */; };
-		384AFB882BEBBDDC006BC6B2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AFB812BEBBDDC006BC6B2 /* ChatView.swift */; };
-		384AFB892BEBBDDC006BC6B2 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */; };
 		384AFB8C2BEBBED6006BC6B2 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 384AFB8B2BEBBED6006BC6B2 /* GoogleGenerativeAI */; };
 		387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A62B6799FC003EDD09 /* travalLocation.swift */; };
 		387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387055A92B67A407003EDD09 /* TravelPlanView.swift */; };
@@ -75,14 +75,14 @@
 /* Begin PBXFileReference section */
 		3812DC862BAF3F74007931D9 /* CulturalReusablePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalReusablePostView.swift; sourceTree = "<group>"; };
 		3812DC882BAF3FD2007931D9 /* CulturalPostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalPostCardView.swift; sourceTree = "<group>"; };
+		3817177A2C1DCB3E0099BB2F /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatService.swift; path = SmartTravel/View/Chat/ChatService.swift; sourceTree = SOURCE_ROOT; };
+		3817177B2C1DCB3E0099BB2F /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBubble.swift; path = SmartTravel/View/Chat/ChatBubble.swift; sourceTree = SOURCE_ROOT; };
+		3817177C2C1DCB3E0099BB2F /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = SmartTravel/View/Chat/ChatView.swift; sourceTree = SOURCE_ROOT; };
+		3817177D2C1DCB3E0099BB2F /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIKey.swift; path = SmartTravel/View/Chat/APIKey.swift; sourceTree = SOURCE_ROOT; };
+		3817177E2C1DCB3E0099BB2F /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBubbleShape.swift; path = SmartTravel/View/Chat/ChatBubbleShape.swift; sourceTree = SOURCE_ROOT; };
+		3817177F2C1DCB3E0099BB2F /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GenerativeAI-Info.plist"; path = "SmartTravel/View/Chat/GenerativeAI-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3817F7292B8103F300E96556 /* MapRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRestaurantView.swift; sourceTree = "<group>"; };
 		384355452BD7F29A000C0837 /* locationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationDetail.swift; sourceTree = "<group>"; };
-		384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
-		384AFB802BEBBDDC006BC6B2 /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
-		384AFB812BEBBDDC006BC6B2 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		387055A62B6799FC003EDD09 /* travalLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travalLocation.swift; sourceTree = "<group>"; };
 		387055A92B67A407003EDD09 /* TravelPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelPlanView.swift; sourceTree = "<group>"; };
 		387055AB2B6800F0003EDD09 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -153,12 +153,12 @@
 		384AFB832BEBBDDC006BC6B2 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				384AFB7D2BEBBDDC006BC6B2 /* APIKey.swift */,
-				384AFB7E2BEBBDDC006BC6B2 /* ChatBubble.swift */,
-				384AFB7F2BEBBDDC006BC6B2 /* ChatBubbleShape.swift */,
-				384AFB802BEBBDDC006BC6B2 /* ChatService.swift */,
-				384AFB812BEBBDDC006BC6B2 /* ChatView.swift */,
-				384AFB822BEBBDDC006BC6B2 /* GenerativeAI-Info.plist */,
+				3817177D2C1DCB3E0099BB2F /* APIKey.swift */,
+				3817177B2C1DCB3E0099BB2F /* ChatBubble.swift */,
+				3817177E2C1DCB3E0099BB2F /* ChatBubbleShape.swift */,
+				3817177A2C1DCB3E0099BB2F /* ChatService.swift */,
+				3817177C2C1DCB3E0099BB2F /* ChatView.swift */,
+				3817177F2C1DCB3E0099BB2F /* GenerativeAI-Info.plist */,
 			);
 			name = Chat;
 			path = "../../../../Desktop/Hd project/Main project items/SmartPaint/SmartPaint/SmartPaint/View/Chat";
@@ -455,8 +455,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C585CC2B612006002755EB /* Preview Assets.xcassets in Resources */,
+				381717852C1DCB3E0099BB2F /* GenerativeAI-Info.plist in Resources */,
 				38C5863C2B612202002755EB /* GoogleService-Info.plist in Resources */,
-				384AFB892BEBBDDC006BC6B2 /* GenerativeAI-Info.plist in Resources */,
 				38C585C92B612006002755EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,9 +469,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3870567E2B79F34D003EDD09 /* EcotourismPostCardView.swift in Sources */,
+				381717832C1DCB3E0099BB2F /* APIKey.swift in Sources */,
 				38DF745C2BA99D0B00FBED41 /* MapViewState.swift in Sources */,
-				384AFB882BEBBDDC006BC6B2 /* ChatView.swift in Sources */,
 				3888CD082BEE7E2D000EFB58 /* PublicTransportView.swift in Sources */,
+				381717822C1DCB3E0099BB2F /* ChatView.swift in Sources */,
 				38C585C72B612004002755EB /* ContentView.swift in Sources */,
 				38C586012B612080002755EB /* MainView.swift in Sources */,
 				38DF745A2BA96B9200FBED41 /* LocationSearchViewModel.swift in Sources */,
@@ -481,6 +482,7 @@
 				38C585E62B61206B002755EB /* attractionData.xcdatamodeld in Sources */,
 				387056742B79E6C6003EDD09 /* ExtremeReusablePostView.swift in Sources */,
 				38C585ED2B61206B002755EB /* RidesType.swift in Sources */,
+				381717842C1DCB3E0099BB2F /* ChatBubbleShape.swift in Sources */,
 				387055A72B6799FC003EDD09 /* travalLocation.swift in Sources */,
 				387055B22B6DAC8D003EDD09 /* ReusablePostView.swift in Sources */,
 				3812DC872BAF3F74007931D9 /* CulturalReusablePostView.swift in Sources */,
@@ -494,8 +496,8 @@
 				38C586022B612080002755EB /* LoginView.swift in Sources */,
 				38C586032B612080002755EB /* RegisterView.swift in Sources */,
 				384355462BD7F29A000C0837 /* locationDetail.swift in Sources */,
+				381717812C1DCB3E0099BB2F /* ChatBubble.swift in Sources */,
 				38C585E52B61206B002755EB /* DataController.swift in Sources */,
-				384AFB872BEBBDDC006BC6B2 /* ChatService.swift in Sources */,
 				387056812B79F733003EDD09 /* SightPostCardView.swift in Sources */,
 				3870567C2B79F27B003EDD09 /* EcotourismReusablePostView.swift in Sources */,
 				387055B42B6E15B6003EDD09 /* PostCardView.swift in Sources */,
@@ -503,12 +505,12 @@
 				38C585E32B61206B002755EB /* View+Extensions.swift in Sources */,
 				38C585FC2B612080002755EB /* RideRequestView.swift in Sources */,
 				387055AA2B67A407003EDD09 /* TravelPlanView.swift in Sources */,
-				384AFB842BEBBDDC006BC6B2 /* APIKey.swift in Sources */,
 				387055AE2B6BA4A9003EDD09 /* TravelPlanResultView.swift in Sources */,
 				38C585E42B61206B002755EB /* LoadingView.swift in Sources */,
 				38C585E82B61206B002755EB /* Place.swift in Sources */,
 				38C586402B612A46002755EB /* ProfileView.swift in Sources */,
 				38C585FD2B612080002755EB /* TravelGuide.swift in Sources */,
+				381717802C1DCB3E0099BB2F /* ChatService.swift in Sources */,
 				38C585E22B61206B002755EB /* TimeFormatting.swift in Sources */,
 				38C585FB2B612080002755EB /* MapViewModel.swift in Sources */,
 				38C585FF2B612080002755EB /* MapView.swift in Sources */,
@@ -516,11 +518,9 @@
 				387055AC2B6800F0003EDD09 /* Post.swift in Sources */,
 				387055B02B6D36D3003EDD09 /* PostTravelPlanView.swift in Sources */,
 				38C585E72B61206B002755EB /* LocationShow.swift in Sources */,
-				384AFB862BEBBDDC006BC6B2 /* ChatBubbleShape.swift in Sources */,
 				38C585EB2B61206B002755EB /* DestinationLocation.swift in Sources */,
 				3888CD0A2BEF35DD000EFB58 /* SearchPublicTransportView.swift in Sources */,
 				387056762B79EB73003EDD09 /* ExtremePostCardView.swift in Sources */,
-				384AFB852BEBBDDC006BC6B2 /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
